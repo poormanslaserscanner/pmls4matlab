@@ -10,3 +10,6 @@
 [submodule "opcodemesh"]
 	path = opcodemesh
 	url = https://github.com/poormanslaserscanner/opcodemesh.git
+[submodule "Triangle"]
+	path = Triangle
+	url = https://github.com/poormanslaserscanner/Triangle.git
