@@ -7,3 +7,6 @@
 [submodule "sqlite"]
 	path = sqlite
 	url = https://github.com/mackyle/sqlite.git
+[submodule "opcodemesh"]
+	path = opcodemesh
+	url = https://github.com/poormanslaserscanner/opcodemesh.git
