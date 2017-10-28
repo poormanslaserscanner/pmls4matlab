@@ -1,3 +1,6 @@
 [submodule "iso2mesh4pmls"]
 	path = iso2mesh4pmls
 	url = https://github.com/poormanslaserscanner/iso2mesh4pmls.git
+[submodule "go-sqlite"]
+	path = go-sqlite
+	url = https://github.com/markuman/go-sqlite.git
