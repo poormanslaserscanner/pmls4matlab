@@ -1,6 +1,3 @@
 [submodule "iso2mesh4pmls"]
 	path = iso2mesh4pmls
 	url = https://github.com/poormanslaserscanner/iso2mesh4pmls.git
-[submodule "matlab-sqlite3-driver"]
-	path = matlab-sqlite3-driver
-	url = https://github.com/kyamagu/matlab-sqlite3-driver.git
