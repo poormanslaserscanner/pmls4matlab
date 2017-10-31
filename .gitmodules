@@ -15,7 +15,7 @@
 	url = https://github.com/poormanslaserscanner/Triangle.git
 [submodule "libigl4pmls\\libigl"]
 	path = libigl4pmls\\libigl
-	url = https://github.com/libigl/libigl.git
+	url = https://github.com/poormanslaserscanner/libigl.git
 [submodule "gptoolbox"]
 	path = gptoolbox
 	url = https://github.com/alecjacobson/gptoolbox.git
