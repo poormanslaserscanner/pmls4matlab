@@ -13,8 +13,8 @@
 [submodule "Triangle"]
 	path = Triangle
 	url = https://github.com/poormanslaserscanner/Triangle.git
-[submodule "libigl4pmls\\libigl"]
-	path = libigl4pmls\\libigl
+[submodule "libigl"]
+	path = libigl4pmls/libigl
 	url = https://github.com/poormanslaserscanner/libigl.git
 [submodule "gptoolbox"]
 	path = gptoolbox
