@@ -1,4 +1,4 @@
-function S = libiglunionpy( HcO, pre )
+function S = libiglunionpy( HcO, pre, premesh, apar, qpar, dpar )
 %REMESHUNIONPY Summary of this function goes here
 %   Detailed explanation goes here
 disp(mfilename());
@@ -8,6 +8,11 @@ for i = 1 : n
     HcO{i} %#ok<NOPRT>
 end
 pre %#ok<NOPRT>end
+premesh %#ok<NOPRT>end
+apar %#ok<NOPRT>end
+qpar %#ok<NOPRT>end
+dpar %#ok<NOPRT>end
+
 Hc = cell(n,1);
 trisc = cell(n,1);
 vtc = cell(n,1);
@@ -17,15 +22,17 @@ for i = 1 : n
     trisc{i} = Hc{i}.tris;
     vtc{i} = Hc{i}.vt;
 end
+params.MeshfixParam = ' -a 1.0 ';
 if pre
-    for i = 1:2
-        [Hc{i}.vt, Hc{i}.tris]=meshcheckrepair(Hc{i}.vt,Hc{i}.tris,'meshfix');
+    for i = 1:n
+        [Hc{i}.vt, Hc{i}.tris]=meshcheckrepair(Hc{i}.vt,Hc{i}.tris,'meshfix', params);
         [Hc{i}.tris, Hc{i}.vt] = filterrefvertices( Hc{i}.tris, Hc{i}.vt );
     end
 end
-[vt,tris] = mesh_boolean(Hc{1}.vt, Hc{1}.tris, Hc{2}.vt, Hc{2}.tris, 'union');
-[vt, tris]=meshcheckrepair(vt, tris, 'meshfix');
-[tris, vt] = filterrefvertices( tris, vt );
+[vt, tris] = tetremeshunionc(trisc, vtc, premesh, apar, qpar, dpar);
+% [vt,tris] = mesh_boolean(Hc{1}.vt, Hc{1}.tris, Hc{2}.vt, Hc{2}.tris, 'union');
+% [vt, tris]=meshcheckrepair(vt, tris, 'meshfix');
+% [tris, vt] = filterrefvertices( tris, vt );
 
 name = '';
 for i = 1 : n
@@ -64,7 +71,9 @@ if m == 1
     S.anchor = hedgesc{1};
 elseif m > 1
     S.anchor = hedgesc{1};
-    S.anchor.vt = [S.anchor.vt; hedgesc{2}.vt];
+    for j = 2 : m
+        S.anchor.vt = [S.anchor.vt; hedgesc{j}.vt];
+    end
 end
 S = matlab2py(clearanchors(S));
 disp('output:');
