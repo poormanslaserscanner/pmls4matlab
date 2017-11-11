@@ -1,0 +1,19 @@
+On win64:
+	Prerequisites:
+		set PMLS_INSTALL_DIR environment variable where you want to install pmls
+		MATLAB2016b or later
+		Microsoft Visual Studio 2017
+		Set VC_ROOT to the dir of vcvarsall.bat:
+			set VC_ROOT=d:\bin\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build
+		Set matlab to use MSVC2017 as default compiler see matlab command: mex -setup
+	
+	Build the binaries of iso2mesh to %PMLS_INSTALL_DIR%:
+		see iso2mesh\iso2mesh_bin\COMPILE
+	Or use precompiled version:
+		Download iso2mesh_bin-devel.zip and iso2mesh_bin.zip from https://github.com/poormanslaserscanner/iso2mesh_bin/releases
+		Unzip both files into %PMLS_INSTALL_DIR%
+	Install sqlite3:
+		Download: https://www.sqlite.org/2017/sqlite-tools-win32-x86-3210000.zip
+		Unzip sqlite3.exe to %PMLS_INSTALL_DIR%\bin
+	Compile opcodemesh:
+		In Matlab cd to opcodemesh\src_matlab and run mexall.m
