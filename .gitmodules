@@ -16,3 +16,6 @@
 [submodule "gptoolbox"]
 	path = gptoolbox
 	url = https://github.com/poormanslaserscanner/gptoolbox.git
+[submodule "iso2mesh"]
+	path = iso2mesh
+	url = https://github.com/poormanslaserscanner/iso2mesh.git
