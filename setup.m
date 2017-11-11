@@ -1,14 +1,14 @@
-p = genpath('gptoolbox-master');
+p = genpath('gptoolbox');
 addpath(p);
-p = genpath('go-sqlite-master');
-addpath(p);
-p = genpath('triangle');
-addpath(p);
-p = genpath('opcodemesh');
-addpath(p);
-p = genpath('iso2mesh');
-addpath(p);
-p = genpath('src');
+addpath('go-sqlite/inst');
+addpath('opcodemesh/matlab');
+addpath('iso2mesh4pmls/iso2mesh');
+addpath('iso2mesh4pmls/bin');
+addpath('bin');
+addpath('libigl4pmls/deform');
+addpath('libigl4pmls/mesh_boolean');
+addpath('libigl4pmls/signed_distance');
+p = genpath('pmls_core');
 addpath(p);
 addpath('.');
 savepath
