@@ -1,4 +1,4 @@
-function S = remeshunionbiharcpy( Hc, vox, ext, premesh )
+function S = remeshunionbiharcpy( Hc, vox, ext, unilap, premesh )
 %REMESHUNIONPY Summary of this function goes here
 %   Detailed explanation goes here
 disp(mfilename());
@@ -9,10 +9,11 @@ for i = 1 : n
 end
 vox %#ok<NOPRT>
 ext %#ok<NOPRT>
+unilap %#ok<NOPRT>
 premesh %#ok<NOPRT>
 [trisc, vtc, H, A] = py2deformmesh(Hc);
 
-[ntris,nvt] = remeshunionbiharc( H.base, H.rays, trisc, vtc, vox, ext, premesh );
+[ntris,nvt] = remeshunionbiharc( H.base, H.rays, trisc, vtc, vox, ext, premesh, unilap );
 name = '';
 for i = 1 : n
     name = [name, Hc{i}.pmls_name, '_'];

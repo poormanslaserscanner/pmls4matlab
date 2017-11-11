@@ -1,8 +1,10 @@
-function [ntris,hvt] = biharpnts_revdist( pnts, ntris, nvt, limit, movablepnts )
+function [ntris,hvt] = biharpnts_revdist( pnts, ntris, nvt, limit, movablepnts, unilap )
 %REMESHANDFILTER Summary of this function goes here
 %   Detailed explanation goes here
 %[nvt,ntris]=meshcheckrepair(nvt,ntris,'meshfix');
-
+if nargin < 6
+    unilap = true;
+end
 DT = DelaunayTri( pnts );
 PI = nearestNeighbor(DT,nvt);
 PIu = unique(PI);
@@ -28,7 +30,11 @@ for j = 1 : m
         
 end
 nvt(sourcei,:);
-hvt = deform(ntris,nvt,sourcei,dest, 2 );
+if unilap
+    hvt = deformunilap(ntris,nvt,sourcei,dest, 2 );
+else
+    hvt = deform(ntris,nvt,sourcei,dest, 2 );
+end
 [hvt,ntris]=meshcheckrepair(hvt,ntris,'meshfix');
 %displaymeshes( {ntris}, {nvt}, [] ); 
 %[nvt,ntris]=meshcheckrepair(nvt,ntris,'dup');

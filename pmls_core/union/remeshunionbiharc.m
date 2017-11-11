@@ -1,10 +1,13 @@
-function [ntris,nvt,nsucc] = remeshunionbiharc( base, rays, trisc, vtc, bpar, bdist, premesh )
+function [ntris,nvt,nsucc] = remeshunionbiharc( base, rays, trisc, vtc, bpar, bdist, premesh, unilap )
 %[trisc, vtc ] = hedgehogs( base, erays, zeroshots );
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %displaymeshes(trisc,vtc,[]);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 if nargin < 7 || numel(trisc) > 1
     premesh = true;
+end
+if nargin < 8
+    unilap = true;
 end
 if premesh
 [v, bb0, grs] = binunion( trisc, vtc, bpar, bdist );
@@ -125,8 +128,11 @@ targetpnts = targetpnts .* [a,a,a];
 % end
 % dxf_close(fid);
 
-
-hvt = deform(elem,nvt,indices,targetpnts, 2 );
+if unilap
+    hvt = deformunilap(elem,nvt,indices,targetpnts, 2 );
+else
+    hvt = deform(elem,nvt,indices,targetpnts, 2 );
+end
 hvt = hvt + nvt;
 %hvt = deformlim(elem,nvt,indices,targetpnts);
 n = size(elem,1);

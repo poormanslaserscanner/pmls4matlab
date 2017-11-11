@@ -1,10 +1,11 @@
-function T = biharpntspy( SO, snaptol, voxsiz, to_raycheck )
+function T = biharpntspy( SO, unilap, snaptol, voxsiz, to_raycheck )
 %BIHARPNTSPY Summary of this function goes here
 %   Detailed explanation goes here
 disp(mfilename());
 disp('input:');
 SO %#ok<NOPRT>
 %HP %#ok<NOPRT>
+unilap %#ok<NOPRT>
 snaptol %#ok<NOPRT>
 voxsiz %#ok<NOPRT>
 to_raycheck %#ok<NOPRT>
@@ -31,7 +32,7 @@ end
 %     feszpnts = P.vt;
 % end
 %feszpnts = [feszpnts; allpnts];
-[tris, vt] = biharpnts_revdist( [anchorvt; allpnts; feszpnts], S.tris, S.vt, snaptol, allpnts );
+[tris, vt] = biharpnts_revdist( [anchorvt; allpnts; feszpnts], S.tris, S.vt, snaptol, allpnts, unilap );
 if ~isempty(allpnts)
     if to_raycheck
         opnts = getrayoutmax(tris, vt, S.hedgehog.base, S.hedgehog.rays, voxsiz);
@@ -42,7 +43,7 @@ if ~isempty(allpnts)
         erindices = int32(unique( nearestNeighbor(DT, feszpnts) ));
         erindices = setdiff( erindices, rindices );
         feszpnts = DT.Points(erindices,:);
-        [tris, vt] = biharpnts_revdist( [anchorvt; allpnts; feszpnts], S.tris, S.vt, snaptol, allpnts );
+        [tris, vt] = biharpnts_revdist( [anchorvt; allpnts; feszpnts], S.tris, S.vt, snaptol, allpnts, unilap );
     end
     [tris, vt] = viewfrombase( S.hedgehog.base, S.hedgehog.rays, tris, vt );
 end
