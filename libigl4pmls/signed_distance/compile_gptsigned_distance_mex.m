@@ -2,8 +2,10 @@ path_to_libigl=[fileparts(mfilename('fullpath')), '/../libigl'];
 MEXOPTS={'-v','-largeArrayDims','-DMEX'};
 MSSE42='CXXFLAGS=$CXXFLAGS -msse4.2';
 STDCPP11='CXXFLAGS=$CXXFLAGS -std=c++11';
-EIGEN_INC='-Id:/pmlsgit/git_iso2mesh_bin/install/Eigen/include/eigen3';
-
+OPENMP= 'COMPFLAGS=$COMPFLAGS /openmp';
+OPENMPL = 'LINKFLAGS=$LINKFLAGS /nodefaultlib:vcomp';
+pmls_dir = getenv('PMLS_INSTALL_DIR');
+EIGEN_INC=['-I', pmls_dir, '/Eigen/include/eigen3'];
 % See libigl documentation. In short, Libigl is a header-only library by
 % default: no compilation needed (like Eigen). There's an advanced **option**
 % to precompile libigl as a static library. This cuts down on compilation time.
@@ -22,25 +24,10 @@ LIBIGL_INC=sprintf('-I%s/include',path_to_libigl);
 LIBIGL_BASE={LIBIGL_INC,LIBIGL_FLAGS{:},LIBIGL_LIB{:},LIBIGL_LIBMATLAB};
 
 
-
-%CORK=[path_to_libigl '/external/cork'];
-CORK_INC='';%sprintf('-I%s/src',CORK);
-CORK_LIB='';%strsplit(sprintf('-L%s/lib -lcork',CORK));
-
-
-CGAL_INC=strsplit('-Id:/pmlsgit/git_iso2mesh_bin/install/CGAL/include -Id:/pmlsgit/git_iso2mesh_bin/iso2mesh_bin/win/mpir/dll/x64/Release -Id:/pmlsgit/git_iso2mesh_bin/iso2mesh_bin/win/mpfr/dll/x64/Release');
-CGAL_LIB=strsplit('-Ld:/pmlsgit/git_iso2mesh_bin/install/CGAL/lib -Ld:/pmlsgit/git_iso2mesh_bin/iso2mesh_bin/win/mpir/dll/x64/Release -Ld:/pmlsgit/git_iso2mesh_bin/iso2mesh_bin/win/mpfr/dll/x64/Release -llibCGAL-vc140-mt-4.11-I-900 -llibCGAL_Core-vc140-mt-4.11-I-900 -lmpir -lmpfr');
-%CGAL_LIB=strsplit('-Lc:/dev/CGAL-4.7/build/install/lib -lCGAL-vc120-mt-4.7 -lCGAL_Core-vc120-mt-4.7 -lgmp -lmpfr');
-CGAL_FLAGS='CXXFLAGS=\$CXXFLAGS -frounding-math';
-
-BOOST='/opt/local/';
-BOOST_INC='-Id:/pmlsgit/git_iso2mesh_bin/install/boost/include/boost-1_65_1';
-BOOST_LIB=strsplit('-Lc:/dev/boost_1_60_0/stage/lib -lboost_thread-vc120-mt-1_60 -lboost_system-vc120-mt-1_60');
-
 mex( ...
-  MEXOPTS{:}, MSSE42, STDCPP11, ...
+  MEXOPTS{:}, MSSE42, STDCPP11, OPENMP, OPENMPL,...
   LIBIGL_BASE{:},EIGEN_INC, ...
-  'signed_distance.cpp');
+  'signed_distance.cpp', 'libiomp5md.lib');
 
 
 % mex( ...
