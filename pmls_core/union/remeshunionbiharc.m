@@ -22,6 +22,11 @@ nvt = nvt(:,1:3);
 nvt = ( nvt + 1.5 ) * grs + repmat( bb0, size(nvt,1),1 );
 
 [surftris,surfvt] = getsurface( elem, nvt );
+
+[surfvt,surftris]=meshcheckrepair(surfvt,surftris,'meshfix');
+[surfvt,surftris]=meshcheckrepair(surfvt,surftris,'dup');
+[surftris, surfvt] = filterrefvertices( surftris, surfvt );
+
 else
     surftris = trisc{1};
     surfvt = vtc{1};
@@ -45,6 +50,8 @@ for i = 1 : n
     basepnts( rayindices{i}, : ) = repmat( base(i,:), numel( rayindices{i} ), 1 );
 end
 projpnts = projfromoutside(basepnts,allpnts,surftris,surfvt);
+%write_ply(surfvt,surftris,'psurf.ply');
+%points2ply(projpnts,'ppnts.ply');
 %indices = revdistnn(allpnts,surfvt);
 indices = revdistnn(projpnts,surfvt);
 logind = ( indices > 0 );
@@ -82,7 +89,6 @@ PI = nearestNeighbor(DT,handlepnts);
 [~, ia] = unique(PI);
 handlepnts = handlepnts( ia, : );
 targetpnts = targetpnts( ia, : );
-
 %[nvt,elem]=surf2mesh([surfvt;handlepnts],surftris,min(surfvt) - 0.2,max(surfvt) + 0.2,1.0,0.5);
 %[nvt,elem] = tetremesh( surftris, [surfvt;handlepnts], 0.5 );
 [nvt,elem] = tetremesh( surftris, surfvt, 0.5 );
@@ -114,10 +120,10 @@ handlepnts = handlepnts(logind,:);
 [indices,m] = unique(indices);
 targetpnts = targetpnts(m,:);
 handlepnts = handlepnts(m,:);
-a = handlepnts + targetpnts - nvt(indices,:);
-a = dot( a, targetpnts, 2 ) ./ dot(targetpnts,targetpnts,2);
-a = max( min(a,1), 0 );
-targetpnts = targetpnts .* [a,a,a];
+targetpnts = handlepnts + targetpnts;% - nvt(indices,:);
+%a = dot( a, targetpnts, 2 ) ./ dot(targetpnts,targetpnts,2);
+%a = max( min(a,1), 0 );
+%targetpnts = targetpnts .* [a,a,a];
 %targetpnts = nvt(indices,:) + targetpnts;
 
 % fid = dxf_open( 'deform.dxf' );
@@ -127,13 +133,16 @@ targetpnts = targetpnts .* [a,a,a];
 %         dxf_polyline( fid, sgm(:,1), sgm(:,2), sgm(:,3) ); 
 % end
 % dxf_close(fid);
-
+%segments2dxf(nvt(indices,:),targetpnts,'sgm.dxf');
+%points2ply( nvt, 'volpnts.ply');
+%[surftris,surfvt] = getsurface( elem, nvt );
+%write_ply(surfvt,surftris,'todeform.ply');
 if unilap
     hvt = deformunilap(elem,nvt,indices,targetpnts, 2 );
 else
     hvt = deform(elem,nvt,indices,targetpnts, 2 );
 end
-hvt = hvt + nvt;
+%hvt = hvt + nvt;
 %hvt = deformlim(elem,nvt,indices,targetpnts);
 n = size(elem,1);
 logind = true(n,1);
