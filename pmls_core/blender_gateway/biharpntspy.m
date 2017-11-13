@@ -35,6 +35,7 @@ end
 [tris, vt] = biharpnts_revdist( [anchorvt; allpnts; feszpnts], S.tris, S.vt, snaptol, allpnts, unilap );
 if ~isempty(allpnts)
     if to_raycheck
+        for i = 1 : 3
         opnts = getrayoutmax(tris, vt, S.hedgehog.base, S.hedgehog.rays, voxsiz);
         feszpnts = [feszpnts;opnts];
         DT = delaunayTriangulation([feszpnts;allpnts]);
@@ -44,6 +45,7 @@ if ~isempty(allpnts)
         erindices = setdiff( erindices, rindices );
         feszpnts = DT.Points(erindices,:);
         [tris, vt] = biharpnts_revdist( [anchorvt; allpnts; feszpnts], S.tris, S.vt, snaptol, allpnts, unilap );
+        end
     end
     [tris, vt] = viewfrombase( S.hedgehog.base, S.hedgehog.rays, tris, vt );
 end

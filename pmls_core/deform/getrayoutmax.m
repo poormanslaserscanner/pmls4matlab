@@ -4,7 +4,33 @@ function pnts = getrayoutmax( tris, vt, base, rays, voxsiz )
 if nargin < 5
     voxsiz = 5;
 end
-[v, bb0, grs] = binunion( {tris}, {[vt;cell2mat(rays)]}, voxsiz, 0.75 );
+
+n = numel(rays);
+pnts = base;
+rnds = zeros(size(base));
+for i = 1 : n
+    m = size(rays{i},1);
+    P0 = repmat(base(i,:), m, 1);
+    d = rays{i} - P0; 
+    Ni = floor(sqrt(dot(d,d,2)) / (voxsiz / 100));
+    d = d ./ repmat(Ni,1,3);
+    N = max(Ni);
+    for j = 1 : N
+        log = j <= Ni;
+        nd = d(log,:);
+        rnd = (rand(size(nd)) - 0.5);
+        rnd = rnd - repmat(dot(nd,rnd,2) ./ dot(nd,nd,2),1,3) .* nd;
+        rnds = [rnds; rnd * (voxsiz / 200)];
+        pnts = [pnts; P0(log,:) + j * nd ];
+    end
+end
+sd = signed_distance(pnts, vt, tris, 'SignedDistanceType', 'winding_number');
+log = sd > -voxsiz/500;
+sprintf('cs2: %f', sum(sd(sd > 0)))
+pnts = pnts(log,:) + rnds(log,:);
+points2ply(pnts,'takk.ply');
+return;
+[v, bb0, grs] = binunion( {tris}, {[vt;cell2mat(rays)]}, voxsiz, 0.25 );
 v = bwdist(v);
 vsiz = size( v );
 
