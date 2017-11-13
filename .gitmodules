@@ -19,3 +19,6 @@
 [submodule "iso2mesh"]
 	path = iso2mesh
 	url = https://github.com/poormanslaserscanner/iso2mesh.git
+[submodule "dxflib"]
+	path = dxflib
+	url = https://github.com/taquart/dxflib.git
