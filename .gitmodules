@@ -25,3 +25,6 @@
 [submodule "trimesh2"]
 	path = trimesh2
 	url = https://github.com/Forceflow/trimesh2.git
+[submodule "glm"]
+	path = glm
+	url = https://github.com/g-truc/glm.git
