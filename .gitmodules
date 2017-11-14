@@ -31,3 +31,6 @@
 [submodule "cuda_voxelizer"]
 	path = cuda_voxelizer
 	url = https://github.com/Forceflow/cuda_voxelizer.git
+[submodule "binvox-rw-matlab"]
+	path = binvox-rw-matlab
+	url = https://github.com/anastasiadk/binvox-rw-matlab.git
