@@ -22,3 +22,6 @@
 [submodule "dxflib"]
 	path = dxflib
 	url = https://github.com/taquart/dxflib.git
+[submodule "trimesh2"]
+	path = trimesh2
+	url = https://github.com/Forceflow/trimesh2.git
