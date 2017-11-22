@@ -33,4 +33,4 @@
 	url = https://github.com/poormanslaserscanner/cuda_voxelizer.git
 [submodule "binvox-rw-matlab"]
 	path = binvox-rw-matlab
-	url = https://github.com/anastasiadk/binvox-rw-matlab.git
+	url = https://github.com/poormanslaserscanner/binvox-rw-matlab.git
