@@ -6,8 +6,7 @@ You can [contact us](mailto:pmls-hu@cave3d.org) if you have questions or comment
 If you're using our work, please drop us a note to justify spending time maintaining this.
 
 ## Copyright
-2014-2017  [Attila G&#XE1;ti](mailto:poormanslaserscanner@gmail.com).
-
+Copyright 2014-2017  [Attila G&#XE1;ti](mailto:poormanslaserscanner@gmail.com).
 If you publish a work, wher you have used PMLS you should cite:
 Attila G&#XE1;ti, Nikolett Reh&#XE1;ny, Bal&#XE1;zs Holl, Zsombor Fekete and P&#XE9;ter S&#X171;r&#X171;: 
 "The Poor Man's Laser Scanner: a Simple Method of 3D Cave Surveying"
