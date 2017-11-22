@@ -22,3 +22,6 @@
 [submodule "dxflib"]
 	path = dxflib
 	url = https://github.com/taquart/dxflib.git
+[submodule "glm"]
+	path = glm
+	url = https://github.com/g-truc/glm.git
