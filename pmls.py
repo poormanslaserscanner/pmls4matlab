@@ -1475,8 +1475,8 @@ class PmlsEngine:
         return cls.eng.extendvisiblepy(S)
 
     @classmethod
-    def remeshunion(cls, S, vox, ext):
-        return cls.eng.remeshunionpy(S, vox, ext)
+    def remeshunion(cls, S, vox, ext, cuda, marcube):
+        return cls.eng.remeshunionpy(S, vox, ext, cuda, marcube)
 
     @classmethod
     def tetremeshunion(cls, S, tetgen, par_a, par_q, par_d):
@@ -1495,12 +1495,12 @@ class PmlsEngine:
         return cls.eng.mergeinputpy(S)
 
     @classmethod
-    def remesh_union(cls, S, vox, ext):
-        return cls.eng.remeshunioncpy(S, vox, ext)
+    def remesh_union(cls, S, vox, ext, cuda, marcube):
+        return cls.eng.remeshunioncpy(S, vox, ext, cuda, marcube)
 
     @classmethod
-    def remesh_union_bihar(cls, S, vox, ext, unilap, premesh):
-        return cls.eng.remeshunionbiharcpy(S, vox, ext, unilap, premesh)
+    def remesh_union_bihar(cls, S, vox, ext, cuda, marcube, unilap, premesh):
+        return cls.eng.remeshunionbiharcpy(S, vox, ext, cuda, marcube, unilap, premesh)
 
     @classmethod
     def normal_union(cls, S, premesh, tetgen, par_a, par_q, par_d):
@@ -1705,7 +1705,10 @@ class PmlsHedgehogUnion(bpy.types.Operator):
     voxel_siz = bpy.props.FloatProperty(
                 name="Voxel size (cm):", default=3.0, step=5, min=0.000001, soft_min=1.0, soft_max=1000.0, subtype='DISTANCE')
     extend = bpy.props.FloatProperty(
-                name="Thicken volume (voxel):", default=3.0, step=5, min=0.0, soft_min=0.0, soft_max=10.0, subtype='DISTANCE')
+                name="Thicken volume (voxel):", default=3.0, step=5, min=-15.0, soft_min=-10.0, soft_max=10.0, subtype='DISTANCE')
+    cuda = bpy.props.BoolProperty(name="Voxelize on GPU", description="Voxelization will be done on the graphics card. Requires CUDA 7.5", default=True)
+    marcub = bpy.props.BoolProperty(name="Use marching cubes", description="If true after voxelization the surface will be reconstructed with marching cubes algorithm, else each voxel side will be kept.", default=True)
+
     
     @classmethod
     def poll(cls, context):
@@ -1714,7 +1717,7 @@ class PmlsHedgehogUnion(bpy.types.Operator):
     def execute(self, context):
         obj = PmlsExtendedHedgehog(context.active_object)
         H = obj.to_matlab()
-        S = PmlsEngine().remeshunion(H, self.voxel_siz, self.extend)
+        S = PmlsEngine().remeshunion(H, self.voxel_siz, self.extend, self.cuda, self. marcub)
         S = PmlsObject(S)
         S.advance(obj,None)
         return {'FINISHED'}
@@ -1756,6 +1759,10 @@ class PmlsVoxelizedUnion(bpy.types.Operator):
                 name="Voxel size (cm):", default=3.0, step=5, min=0.000001, soft_min=1.0, soft_max=1000.0, subtype='DISTANCE')
     extend = bpy.props.FloatProperty(
                 name="Thin volume (voxel):", default=3.0, step=5, min=0.0, soft_min=0.0, soft_max=10.0, subtype='DISTANCE')
+
+    cuda = bpy.props.BoolProperty(name="Voxelize on GPU", description="Voxelization will be done on the graphics card. Requires CUDA 7.5", default=True)
+    marcub = bpy.props.BoolProperty(name="Use marching cubes", description="If true after voxelization the surface will be reconstructed with marching cubes algorithm, else each voxel side will be kept.", default=True)
+
     deform = bpy.props.BoolProperty(name="Volumetric deform", default=True)
 
 #     hedgehog = bpy.props.StringProperty()
@@ -1792,9 +1799,9 @@ class PmlsVoxelizedUnion(bpy.types.Operator):
         for o in sobjs:
             objs.append(o.to_matlab(no_anchor=True))
         if self.deform:
-            T = PmlsEngine.remesh_union_bihar(objs, self.voxel_siz, self.extend, self.unilap, self.premesh)
+            T = PmlsEngine.remesh_union_bihar(objs, self.voxel_siz, self.extend, self.cuda, self.marcub, self.unilap, self.premesh)
         else:
-            T = PmlsEngine.remesh_union(objs, self.voxel_siz, self.extend)
+            T = PmlsEngine.remesh_union(objs, self.voxel_siz, self.extend, self.cuda, self.marcub)
         if in_place:
             aobj = aobj.update_from_matlab(T)
         else:
@@ -2552,12 +2559,16 @@ class PmlsMultipleObjectPanel(bpy.types.Panel):
         opprops = col1.operator("pmls.voxelized_union", text="Union/Remesh by voxelization")
         opprops.voxel_siz = scene.pmls_op_hedgehog_union_vox
         opprops.extend = scene.pmls_op_hedgehog_union_ext
+        opprops.cuda = scene.pmls_op_hedgehog_union_cuda
+        opprops.marcub = scene.pmls_op_hedgehog_union_marcub
         opprops.deform = scene.pmls_op_voxelized_union_vol
 #         opprops.hedgehog = scene.pmls_op_smooth_by_surface_deform_hdg
         opprops.unilap = scene.pmls_op_voxelized_union_unilap
         opprops.premesh = scene.pmls_op_voxelized_union_pre
         col1.prop( scene, "pmls_op_hedgehog_union_vox" )
         col1.prop( scene, "pmls_op_hedgehog_union_ext" )
+        col1.prop( scene, "pmls_op_hedgehog_union_cuda")
+        col1.prop( scene, "pmls_op_hedgehog_union_marcub")
         col1.prop( scene, "pmls_op_voxelized_union_vol")
         if scene.pmls_op_voxelized_union_vol:
             box = col1.box()
@@ -2835,9 +2846,14 @@ class PmlsExtendedHedgehogPanelBase(PmlsHedgehogPanelBase):
         col = box.column(align=True)
         opprop = col.operator("pmls.hedgehog_union", text="Create")
         opprop.voxel_siz = obj.users_scene[0].pmls_op_hedgehog_union_vox
-        opprop.extend = obj.users_scene[0].pmls_op_hedgehog_union_ext
+        opprop.extend    = obj.users_scene[0].pmls_op_hedgehog_union_ext
+        opprop.cuda      = obj.users_scene[0].pmls_op_hedgehog_union_cuda
+        opprop.marcub    = obj.users_scene[0].pmls_op_hedgehog_union_marcub
+        
         col.prop( obj.users_scene[0], "pmls_op_hedgehog_union_vox" )
         col.prop( obj.users_scene[0], "pmls_op_hedgehog_union_ext" )
+        col.prop( obj.users_scene[0], "pmls_op_hedgehog_union_cuda")
+        col.prop( obj.users_scene[0], "pmls_op_hedgehog_union_marcub")
 
         col0.label(text="Union:")
         box = col0.box()
@@ -2978,7 +2994,9 @@ def register():
     bpy.types.Scene.pmls_op_hedgehog_union_vox = bpy.props.FloatProperty(
         name="Voxel size (cm):", default=3.0, step=5, min=0.000001, soft_min=1.0, soft_max=1000.0, subtype='DISTANCE')
     bpy.types.Scene.pmls_op_hedgehog_union_ext = bpy.props.FloatProperty(
-        name="Thin volume (voxel):", default=1.0, step=5, min=0.0, soft_min=0.0, soft_max=10.0, subtype='DISTANCE')
+        name="Thin volume (voxel):", default=1.0, step=5, min=-15.0, soft_min=-10.0, soft_max=10.0, subtype='DISTANCE')
+    bpy.types.Scene.pmls_op_hedgehog_union_cuda = bpy.props.BoolProperty(name="Voxelize on GPU", description="Voxelization will be done on the graphics card. Requires CUDA 7.5", default=True)
+    bpy.types.Scene.pmls_op_hedgehog_union_marcub = bpy.props.BoolProperty(name="Use marching cubes", description="If true after voxelization the surface will be reconstructed with marching cubes algorithm, else each voxel side will be kept.", default=True)
 
     bpy.types.Scene.pmls_op_hedgehog_union_tetgen = bpy.props.BoolProperty(name="Remesh before union", description="Remesh increases the number of triangles, but the mesh will be nicer.", default=True)
     bpy.types.Scene.pmls_op_hedgehog_union_tetgen_a = bpy.props.FloatProperty(

@@ -5,7 +5,7 @@ DT = DelaunayTri( pnts );
 PI = nearestNeighbor(DT,nvt);
 m = size(DT.X,1);
 sourcei = zeros(m,1);
-for j = 1 : m
+parfor j = 1 : m
     logind = ( PI == j );
     if any(logind)
         srci = find(logind);

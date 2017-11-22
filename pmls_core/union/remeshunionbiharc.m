@@ -1,47 +1,38 @@
-function [ntris,nvt,nsucc] = remeshunionbiharc( base, rays, trisc, vtc, bpar, bdist, premesh, unilap )
+function [ntris,nvt,nsucc] = remeshunionbiharc( base, rays, trisc, vtc, bpar, bdist,...
+    cuda, marcube, premesh, unilap )
 %[trisc, vtc ] = hedgehogs( base, erays, zeroshots );
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %displaymeshes(trisc,vtc,[]);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-if nargin < 7 || numel(trisc) > 1
-    premesh = true;
+if nargin < 7
+    cuda = true;
 end
 if nargin < 8
+    marcube = true;
+end
+if nargin < 9 || numel(trisc) > 1
+    premesh = true;
+end
+if nargin < 10
     unilap = true;
 end
 if premesh
-[v, bb0, grs] = binunion( trisc, vtc, bpar, bdist );
-%[nvt, elem]=v2m( v, 0.5, 2, 3, 'cgalmesh');
-[nvt, elem]=v2m( v, 0.5, 2, 10, 'cgalmesh');
+    [v, bb0, grs] = binunion( trisc, vtc, bpar, bdist );
+    [nvt, elem]=v2m( v, 0.5, 2, 10, 'cgalmesh');
+    elem = elem(:,1:4);
+    nvt = nvt(:,1:3);
+    [elem, nvt] = filterrefvertices( elem, nvt );
+    nvt = ( nvt + 0.5 ) * grs + repmat( bb0, size(nvt,1),1 );
 
-%[nvt,elem]=surf2mesh(vtc{1},trisc{1},min(vtc{1}) - 0.2,max(vtc{1}) + 0.2,1.0,0.5);
-
-elem = elem(:,1:4);
-nvt = nvt(:,1:3);
-[elem, nvt] = filterrefvertices( elem, nvt );
-nvt = ( nvt + 1.5 ) * grs + repmat( bb0, size(nvt,1),1 );
-
-[surftris,surfvt] = getsurface( elem, nvt );
-
-[surfvt,surftris]=meshcheckrepair(surfvt,surftris,'meshfix');
-[surfvt,surftris]=meshcheckrepair(surfvt,surftris,'dup');
-[surftris, surfvt] = filterrefvertices( surftris, surfvt );
+    [surftris,surfvt] = getsurface( elem, nvt );
+    [surfvt,surftris]=meshcheckrepair(surfvt,surftris,'meshfix');
+    [surfvt,surftris]=meshcheckrepair(surfvt,surftris,'dup');
+    [surftris, surfvt] = filterrefvertices( surftris, surfvt );
 
 else
     surftris = trisc{1};
     surfvt = vtc{1};
 end
-%TR = TriRep( elem,nvt );
-%E = edges(TR);
-%fid = dxf_open( 'tetra.dxf' );
-%n = size( E, 1 );
-%for i = 1 : n
-%        sgm = [nvt(E(i,1),:);nvt(E(i,2),:)];
-%        dxf_polyline( fid, sgm(:,1), sgm(:,2), sgm(:,3) ); 
-%end
-%dxf_close(fid);
-
-
 
 [allpnts,rayindices] = rays2indices(rays);
 n = numel(rays);
@@ -50,9 +41,6 @@ for i = 1 : n
     basepnts( rayindices{i}, : ) = repmat( base(i,:), numel( rayindices{i} ), 1 );
 end
 projpnts = projfromoutside(basepnts,allpnts,surftris,surfvt);
-%write_ply(surfvt,surftris,'psurf.ply');
-%points2ply(projpnts,'ppnts.ply');
-%indices = revdistnn(allpnts,surfvt);
 indices = revdistnn(projpnts,surfvt);
 logind = ( indices > 0 );
 nsucc = nnz(logind);
@@ -61,8 +49,6 @@ allpnts = allpnts(logind,:);
 basepnts = basepnts(logind,:);
 targetpnts = zeros(0,3);
 handlepnts = zeros(0,3);
-%targetpnts = allpnts;
-%handlepnts = surfvt(indices,:);
 n = numel( indices );
 for i = 1 : n
     p0 = basepnts(i,:);
@@ -89,7 +75,6 @@ PI = nearestNeighbor(DT,handlepnts);
 [~, ia] = unique(PI);
 handlepnts = handlepnts( ia, : );
 targetpnts = targetpnts( ia, : );
-%[nvt,elem]=surf2mesh([surfvt;handlepnts],surftris,min(surfvt) - 0.2,max(surfvt) + 0.2,1.0,0.5);
 %[nvt,elem] = tetremesh( surftris, [surfvt;handlepnts], 0.5 );
 [nvt,elem] = tetremesh( surftris, surfvt, 0.5 );
 %elem = elem(:,1:4);
@@ -126,27 +111,15 @@ targetpnts = handlepnts + targetpnts;% - nvt(indices,:);
 %targetpnts = targetpnts .* [a,a,a];
 %targetpnts = nvt(indices,:) + targetpnts;
 
-% fid = dxf_open( 'deform.dxf' );
-% n = numel( indices );
-% for i = 1 : n
-%         sgm = [nvt(indices(i),:);targetpnts(i,:)];
-%         dxf_polyline( fid, sgm(:,1), sgm(:,2), sgm(:,3) ); 
-% end
-% dxf_close(fid);
-%segments2dxf(nvt(indices,:),targetpnts,'sgm.dxf');
-%points2ply( nvt, 'volpnts.ply');
-%[surftris,surfvt] = getsurface( elem, nvt );
-%write_ply(surfvt,surftris,'todeform.ply');
 if unilap
     hvt = deformunilap(elem,nvt,indices,targetpnts, 2 );
 else
     hvt = deform(elem,nvt,indices,targetpnts, 2 );
 end
 %hvt = hvt + nvt;
-%hvt = deformlim(elem,nvt,indices,targetpnts);
 n = size(elem,1);
 logind = true(n,1);
-for i = 1 : n
+parfor i = 1 : n
     act = elem(i,:);
     a = hvt( act(2),: ) - hvt( act(1),: );
     b = hvt( act(3),: ) - hvt( act(1),: );
@@ -154,61 +127,9 @@ for i = 1 : n
     logind(i) = det( [a;b;c] ) > 0;
 end
 elem = elem( logind,:);
-% fid = dxf_open( 'tetradef.dxf' );
-% n = size( E, 1 );
-% for i = 1 : n
-%         sgm = [hvt(E(i,1),:);hvt(E(i,2),:)];
-%         dxf_polyline( fid, sgm(:,1), sgm(:,2), sgm(:,3) ); 
-% end
-% dxf_close(fid);
-
-
-%[hvt,ntris]=meshcheckrepair(hvt,ntris,'meshfix');
-%displaymeshes( {ntris}, {nvt}, [] ); 
-%[nvt,ntris]=meshcheckrepair(nvt,ntris,'dup');
 [elem, hvt] = filterrefvertices( elem, hvt );
-
-
-
-%[elem,nvt] = biharpnts( pnts, elem, nvt, 1000 );
-
 [ntris,nvt] = getsurface( elem, hvt );
-%savestl( nvt,ntris, 'd0.stl' );
-%[ntris, nvt] = filterrefvertices( ntris, nvt );
-[ntris,nvt] = remeshunionc({ntris},{nvt}, bpar, bdist);
-%[ntris, nvt] = filterrefvertices( ntris, nvt );
-%savestl( nvt,ntris, 'd1.stl' );
-
-%[nvt,ntris]=meshcheckrepair(nvt,ntris,'meshfix');
-%[nvt,ntris]=meshcheckrepair(nvt,ntris,'dup');
-%[ntris, nvt] = filterrefvertices( ntris, nvt );
-%savestl( nvt,ntris, 'd2.stl' );
-
-%for iiii = 1 : 3
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%displaymeshes( {ntris}, {nvt}, [] ); 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-return
-DT = DelaunayTri( nvt );
-QX = cell2mat( rays );
-PI = nearestNeighbor(DT,QX);
-n = size( nvt,1);
-modified = false( n, 1 );
-modified( PI ) = true;
-ntris = discretevoronoi( ntris, nvt, modified );
-displaymeshes( {ntris}, {nvt}, [] );
-nvt(PI,:) = QX;
-displaymeshes( {ntris}, {nvt}, [] ); 
-[ntris,nvt] = filterrefvertices( ntris,nvt );
-displaymeshes( {ntris}, {nvt}, [] ); 
-[nvt,ntris]=meshcheckrepair(nvt,ntris,'meshfix');
-displaymeshes( {ntris}, {nvt}, [] ); 
-[nvt,ntris]=meshcheckrepair(nvt,ntris,'dup');
-displaymeshes( {ntris}, {nvt}, [] ); 
-[ntris, nvt] = filterrefvertices( ntris, nvt );
-
-displaymeshes( {ntris}, {nvt}, [] ); 
-%end
+[ntris,nvt] = remeshunionc({ntris},{nvt}, bpar, bdist, cuda, marcube);
 end
 
 
