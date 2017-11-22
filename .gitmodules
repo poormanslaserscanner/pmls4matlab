@@ -27,4 +27,4 @@
 	url = https://github.com/g-truc/glm.git
 [submodule "cuda_voxelizer"]
 	path = cuda_voxelizer
-	url = https://github.com/Forceflow/cuda_voxelizer.git
+	url = https://github.com/poormanslaserscanner/cuda_voxelizer.git
