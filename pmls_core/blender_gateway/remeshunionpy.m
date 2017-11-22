@@ -1,4 +1,4 @@
-function S = remeshunionpy( H, vox, ext )
+function S = remeshunionpy( H, vox, ext, cuda, marcube )
 %REMESHUNIONPY Summary of this function goes here
 %   Detailed explanation goes here
 disp(mfilename());
@@ -8,7 +8,7 @@ vox %#ok<NOPRT>
 ext %#ok<NOPRT>
 
 H = py2matlab( H );
-[S.tris,S.vt] = remeshunion(H.base,H.erays,H.zeroshots, vox, ext );
+[S.tris,S.vt] = remeshunion(H.base,H.erays,H.zeroshots, vox, ext, cuda, marcube );
 
 S.pmls_type = 'mesh';
 S.pmls_name = [H.pmls_name, '_union'];

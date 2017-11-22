@@ -1,4 +1,4 @@
-function S = remeshunioncpy( Hc, vox, ext )
+function S = remeshunioncpy( Hc, vox, ext, cuda, marcube )
 %REMESHUNIONPY Summary of this function goes here
 %   Detailed explanation goes here
 disp(mfilename());
@@ -10,13 +10,15 @@ end
 vox %#ok<NOPRT>
 ext %#ok<NOPRT>end
 [trisc, vtc, H, A] = py2deformmesh(Hc);
-for i = 1 : n
-    [vtc{i},trisc{i}]=meshcheckrepair(vtc{i},trisc{i},'meshfix');
-
-    [trisc{i}, vtc{i}] = filterrefvertices( trisc{i}, vtc{i} );
-    
-end
-[ntris,nvt] = remeshunionc( trisc, vtc, vox, ext );
+% for i = 1 : n
+%     [vtc{i},trisc{i}]=meshcheckrepair(vtc{i},trisc{i},'meshfix');
+% 
+%     [trisc{i}, vtc{i}] = filterrefvertices( trisc{i}, vtc{i} );
+%     
+% end
+tic
+[ntris,nvt] = remeshunionc( trisc, vtc, vox, ext, cuda, marcube );
+toc
 name = '';
 for i = 1 : n
     name = [name, Hc{i}.pmls_name, '_'];
