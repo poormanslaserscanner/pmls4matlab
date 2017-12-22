@@ -32,7 +32,7 @@ end
 %     feszpnts = P.vt;
 % end
 %feszpnts = [feszpnts; allpnts];
-[tris, vt] = biharpnts_revdist( [anchorvt; allpnts; feszpnts], S.tris, S.vt, snaptol, allpnts, unilap );
+[tris, vt, outrays] = biharpnts_revdist( [anchorvt; allpnts; feszpnts], S.tris, S.vt, snaptol, allpnts, unilap );
 if ~isempty(allpnts)
     if to_raycheck
         for i = 1 : 3
@@ -54,11 +54,14 @@ if ~isempty(feszpnts)
     T.anchor = struct('tris', zeros(0,3), 'vt', feszpnts, 'pmls_type', 'mesh', 'pmls_name', [S.pmls_name, '_anchor']);   
 end
 T = matlab2py(T);
+T.selhdgvt = int32(zeros(1,0));
 if isfield(SO, 'hedgehog')
     T.hedgehog = false; 
+    indices = cell2mat(SO.hedgehog.rays_i);
+    T.selhdgvt = int32(indices(outrays) - 1)';
 end
 disp('output:');
 T %#ok<NOPRT>
 
-end
+ end
 
