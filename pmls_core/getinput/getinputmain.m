@@ -27,15 +27,25 @@ fid = fopen(csvfile,'rt');
 textscan(fid,'%s', 1,'delimiter', '\n');
 while ~feof(fid)
     lin = textscan(fid,'%s', 1,'delimiter', '\n');
+    if numel( lin ) < 1
+        continue;
+    end
     lin = lin{1};
     if numel( lin ) < 1
         continue;
     end
     lin = lin{1};
     tmp = textscan( lin, '%s', 'delimiter', '|');
+    if numel( tmp ) < 1
+        continue;
+    end
     tmp = tmp{1};
     csvfile = [maindir, tmp{1}, '.csv'];
-    decl = str2double(tmp{6});
+    if numel(tmp) < 6
+        decl = 0.0;
+    else
+        decl = str2double(tmp{6});
+    end
     [ ovid, ovpnt, edg, orays, ozeroshots] = getrays( csvfile, vid, vpnt, edg, decl );
     oerays = cell(numel(orays),1);
     n = numel(oerays);

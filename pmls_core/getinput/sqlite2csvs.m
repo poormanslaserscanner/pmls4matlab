@@ -14,13 +14,16 @@ while ~feof(fid)
     end
     lin = lin{1};
     tmp = textscan( lin, '%s', 'delimiter', '|');
+    if numel(tmp) < 1
+        continue;
+    end
     tmp = tmp{1};
+    if numel(tmp) < 1
+        continue
+    end
     csvfile = [dir, tmp{1}, '.csv'];
-    sqlite2csv( sqfile, round(str2double(tmp{1})), csvfile );  
-    
+    sqlite2csv( sqfile, round(str2double(tmp{1})), csvfile );      
 end
 fclose(fid);
-
-
 end
 
