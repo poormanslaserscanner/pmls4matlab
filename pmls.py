@@ -1475,8 +1475,8 @@ class PmlsEngine:
         return cls.eng.extendvisiblepy(S)
 
     @classmethod
-    def remeshunion(cls, S, vox, ext, cuda, marcube):
-        return cls.eng.remeshunionpy(S, vox, ext, cuda, marcube)
+    def remeshunion(cls, S, vox, ext, cuda, marcube, shortenrays):
+        return cls.eng.remeshunionpy(S, vox, ext, cuda, marcube, shortenrays)
 
     @classmethod
     def tetremeshunion(cls, S, tetgen, par_a, par_q, par_d):
@@ -1491,8 +1491,16 @@ class PmlsEngine:
         return cls.eng.mappntspy(S)
 
     @classmethod
+    def get_outliers(cls, S, internal, dihedral):
+        return cls.eng.getoutlierspy(S, internal, dihedral)
+
+    @classmethod
     def merge_hedgehogs(cls, S):
         return cls.eng.mergeinputpy(S)
+
+    @classmethod
+    def cutback_at_bridges(cls, S):
+        return cls.eng.cutbackpy(S)
 
     @classmethod
     def remesh_union(cls, S, vox, ext, cuda, marcube):
@@ -1708,6 +1716,8 @@ class PmlsHedgehogUnion(bpy.types.Operator):
                 name="Thicken volume (voxel):", default=3.0, step=5, min=-15.0, soft_min=-10.0, soft_max=10.0, subtype='DISTANCE')
     cuda = bpy.props.BoolProperty(name="Voxelize on GPU", description="Voxelization will be done on the graphics card. Requires CUDA 7.5", default=True)
     marcub = bpy.props.BoolProperty(name="Use marching cubes", description="If true after voxelization the surface will be reconstructed with marching cubes algorithm, else each voxel side will be kept.", default=True)
+    shortenrays = bpy.props.FloatProperty( name="Shorten rays (voxel):", default=0.7, step=1, min=0.0, soft_min=0.0, soft_max=10.0, subtype='DISTANCE')
+
 
     
     @classmethod
@@ -1717,7 +1727,7 @@ class PmlsHedgehogUnion(bpy.types.Operator):
     def execute(self, context):
         obj = PmlsExtendedHedgehog(context.active_object)
         H = obj.to_matlab()
-        S = PmlsEngine().remeshunion(H, self.voxel_siz, self.extend, self.cuda, self. marcub)
+        S = PmlsEngine().remeshunion(H, self.voxel_siz, self.extend, self.cuda, self.marcub, self.shortenrays)
         S = PmlsObject(S)
         S.advance(obj,None)
         return {'FINISHED'}
@@ -2035,6 +2045,45 @@ class PmlsMergeHedgehogs(bpy.types.Operator):
 #        aobj = aobj.update_from_matlab(T)                
         return {'FINISHED'}
 
+
+class PmlsCutBackAtBridges(bpy.types.Operator):
+    """Cut back splay shots at small features"""    
+    bl_idname = "pmls.cutback_at_bridges"
+    bl_label = "pmls cutback at bridges"
+
+    @classmethod
+    def poll(cls, context):
+        obj = context.active_object
+        if not PmlsEngine.isr:
+            return False
+        if obj is None:
+            return False
+        return pmls_is_deform_mesh(obj)
+        
+    def execute(self, context):
+        obj = PmlsObject(context.active_object)
+        S = obj.to_matlab()
+        data = PmlsEngine.cutback_at_bridges(S)
+        selvt = data.get("selhdgvt")
+        obj = PmlsObject(data)
+        if obj:
+            if selvt:
+                if not isinstance(selvt, collections.Iterable):
+                    selvt = [[selvt]]
+                selvt =  [v[0] for v in selvt]
+                bm = obj.get_bmesh()
+                bm.verts.ensure_lookup_table()
+                for v in bm.verts:
+                    v.hide = False
+                    v.select = False
+                for i in selvt:
+                    bm.verts[i].hide = False
+                    bm.verts[i].select = True
+                bm.select_flush(True)
+                bmesh.update_edit_mesh(obj.object.data, tessface=False, destructive=False)
+        return {'FINISHED'}
+
+
 class PmlsSurfaceDeform(bpy.types.Operator):
     """Snaps surface to points and interpolates by biharmonic surface"""    
     bl_idname = "pmls.smoot_by_surface_deform"
@@ -2095,6 +2144,7 @@ class PmlsSurfaceDeform(bpy.types.Operator):
 #             HP["P"] = points.to_matlab()
 #         data = PmlsEngine.bihar_pnts(S, HP, self.snaptol, self.voxsiz)
         data = PmlsEngine.bihar_pnts(S, self.unilap, self.snaptol, self.voxsiz, self.to_raycheck)
+        selvt = data.get("selhdgvt")
 #         n = len(data)
         if in_place:
             obj = obj.update_from_matlab(data)
@@ -2107,17 +2157,72 @@ class PmlsSurfaceDeform(bpy.types.Operator):
                 
                 
             data = obj.complete_matlab_data(data)
-                
+               
             obj = PmlsObject(data)
+            obj = obj.hedgehog()
+            if obj:
+                if selvt:
+                    if not isinstance(selvt, collections.Iterable):
+                        selvt = [[selvt]]
+                    selvt =  [v[0] for v in selvt]
+                    bm = obj.get_bmesh()
+                    bm.verts.ensure_lookup_table()
+                    for i in selvt:
+                        bm.verts[i].hide = False
+                        bm.verts[i].select = True
+                    bm.select_flush(True)
+                    bmesh.update_edit_mesh(obj.object.data, tessface=False, destructive=False)
+                
 #             if n > 1:
 #                 points = PmlsObject(data[1])
 #         obj.advance(hedgehog, points)
         return {'FINISHED'}
 
+class PmlsSelectOutliers(bpy.types.Operator):
+    """Select outliers"""    
+    bl_idname = "pmls.select_outliers"
+    bl_label = "pmls select outliers"
+#     hedgehog = bpy.props.StringProperty()
+#     points = bpy.props.StringProperty()
+    internal = bpy.props.FloatProperty(
+        name="Min internal angle (deg)", description="Vertices without larger iternal angle in connected triangles will be selected.",
+        default=5.0, step=0.25, min=0.0, soft_min=0.0, soft_max=30, subtype='UNSIGNED')
+    dihedral = bpy.props.FloatProperty(
+        name="Min dihedral angle (deg)", description="Vertices with smaller dihedral angle on connected edges will be selected.",
+        default=5.0, step=0.25, min=0.0, soft_min=0.0, soft_max=45, subtype='UNSIGNED')
+
+
+    @classmethod
+    def poll(cls, context):
+        obj = context.active_object
+        if not PmlsEngine.isr:
+            return False
+        if obj.mode != "EDIT":
+            return False
+        if obj is None:
+            return False
+        return pmls_is_hedgehog(obj) or pmls_is_ehedgehog(obj)
+        
+    def execute(self, context):
+        obj = PmlsObject(context.active_object)
+        S = obj.to_matlab()
+        selvt = PmlsEngine.get_outliers(S, self.internal, self.dihedral)
+        if selvt:
+            if not isinstance(selvt, collections.Iterable):
+                selvt = [[selvt]]
+            selvt =  [v[0] for v in selvt]
+            bm = obj.get_bmesh()
+            bm.verts.ensure_lookup_table()
+            for i in selvt:
+                bm.verts[i].select = True
+            bm.select_flush(True)
+            bmesh.update_edit_mesh(obj.object.data, tessface=False, destructive=False)
+        return {'FINISHED'}
+    
 class PmlsMapPointsToMesh(bpy.types.Operator):
-    """Select mapped points on surface surface"""    
+    """Select mapped points on surface"""    
     bl_idname = "pmls.map_points_to_mesh"
-    bl_label = "pmls smooth by surface deform"
+    bl_label = "pmls map points to mesh"
 #     hedgehog = bpy.props.StringProperty()
 #     points = bpy.props.StringProperty()
 
@@ -2529,6 +2634,7 @@ class PmlsMultipleObjectPanel(bpy.types.Panel):
         col1 = box.column(align=False)
         col1.operator("pmls.merge_selected_hedges_to_active", text="Merge")
         col1.operator("pmls.separate_turtles", text="Separate")
+        col1.operator("pmls.cutback_at_bridges", text="Cut back at bridges")
         col.separator()
         col.label(text="Smooth mesh:")
         box = col.box()
@@ -2757,6 +2863,12 @@ class PmlsHedgehogPanelBase(PmlsObjectPanel):
 #        col.separator()
 #        col.prop( obj.users_scene[0], "pmls_disp_base" )
 
+        opprop = col.operator("pmls.select_outliers", text="Select outliers")
+        opprop.internal = obj.users_scene[0].pmls_op_select_outliers_internal
+        opprop.dihedral = obj.users_scene[0].pmls_op_select_outliers_dihedral
+        col.prop( obj.users_scene[0], "pmls_op_select_outliers_internal" )
+        col.prop( obj.users_scene[0], "pmls_op_select_outliers_dihedral" )
+        
         col.prop( obj.users_scene[0], "pmls_disp_pnts" )
         col.prop( obj.users_scene[0], "pmls_disp_zeroshots" )
         col.prop( obj.users_scene[0], "pmls_disp_edges" )
@@ -2845,15 +2957,17 @@ class PmlsExtendedHedgehogPanelBase(PmlsHedgehogPanelBase):
         box = col0.box()
         col = box.column(align=True)
         opprop = col.operator("pmls.hedgehog_union", text="Create")
-        opprop.voxel_siz = obj.users_scene[0].pmls_op_hedgehog_union_vox
-        opprop.extend    = obj.users_scene[0].pmls_op_hedgehog_union_ext
-        opprop.cuda      = obj.users_scene[0].pmls_op_hedgehog_union_cuda
-        opprop.marcub    = obj.users_scene[0].pmls_op_hedgehog_union_marcub
+        opprop.voxel_siz    = obj.users_scene[0].pmls_op_hedgehog_union_vox
+        opprop.extend       = obj.users_scene[0].pmls_op_hedgehog_union_ext
+        opprop.cuda         = obj.users_scene[0].pmls_op_hedgehog_union_cuda
+        opprop.marcub       = obj.users_scene[0].pmls_op_hedgehog_union_marcub
+        opprop.shortenrays  = obj.users_scene[0].pmls_op_hedgehog_union_shorten
         
         col.prop( obj.users_scene[0], "pmls_op_hedgehog_union_vox" )
         col.prop( obj.users_scene[0], "pmls_op_hedgehog_union_ext" )
         col.prop( obj.users_scene[0], "pmls_op_hedgehog_union_cuda")
         col.prop( obj.users_scene[0], "pmls_op_hedgehog_union_marcub")
+        col.prop( obj.users_scene[0], "pmls_op_hedgehog_union_shorten")
 
         col0.label(text="Union:")
         box = col0.box()
@@ -2993,6 +3107,8 @@ def register():
     
     bpy.types.Scene.pmls_op_hedgehog_union_vox = bpy.props.FloatProperty(
         name="Voxel size (cm):", default=3.0, step=5, min=0.000001, soft_min=1.0, soft_max=1000.0, subtype='DISTANCE')
+    bpy.types.Scene.pmls_op_hedgehog_union_shorten = bpy.props.FloatProperty(
+        name="Shorten rays (voxel):", default=0.7, step=1, min=0.0, soft_min=0.0, soft_max=10.0, subtype='DISTANCE')
     bpy.types.Scene.pmls_op_hedgehog_union_ext = bpy.props.FloatProperty(
         name="Thin volume (voxel):", default=1.0, step=5, min=-15.0, soft_min=-10.0, soft_max=10.0, subtype='DISTANCE')
     bpy.types.Scene.pmls_op_hedgehog_union_cuda = bpy.props.BoolProperty(name="Voxelize on GPU", description="Voxelization will be done on the graphics card. Requires CUDA 7.5", default=True)
@@ -3008,6 +3124,12 @@ def register():
     bpy.types.Scene.pmls_op_hedgehog_union_tetgen_d = bpy.props.FloatProperty(
         name="Min dihedral angle (deg)", description="Second value of tetgen command line parameter -q.",
         default=0.0, step=5.0, min=0.0, soft_min=0.0, soft_max=70, subtype='UNSIGNED')
+    bpy.types.Scene.pmls_op_select_outliers_internal = bpy.props.FloatProperty(
+        name="Min internal angle (deg)", description="Vertices without larger iternal angle in connected triangles will be selected.",
+        default=5.0, step=25, min=0.0, soft_min=0.0, soft_max=30, subtype='UNSIGNED')
+    bpy.types.Scene.pmls_op_select_outliers_dihedral = bpy.props.FloatProperty(
+        name="Min dihedral angle (deg)", description="Vertices with smaller dihedral angle on connected edges will be selected.",
+        default=5.0, step=25, min=0.0, soft_min=0.0, soft_max=45, subtype='UNSIGNED')
 
 
     bpy.types.Scene.pmls_op_smooth_by_surface_deform_hdg = bpy.props.StringProperty()
@@ -3047,6 +3169,7 @@ def register():
     bpy.utils.register_class(PmlsDeselectAllStations)
     bpy.utils.register_class(PmlsExtendHedgehog)
     bpy.utils.register_class(PmlsMergeHedgehogs)
+    bpy.utils.register_class(PmlsCutBackAtBridges)
     bpy.utils.register_class(PmlsCreateMainCsv)
     bpy.utils.register_class(PmlsCreateSurveyCsvs)
     bpy.utils.register_class(PmlsImportCsv)
@@ -3064,6 +3187,7 @@ def register():
     bpy.utils.register_class(PmlsDelete)
     bpy.utils.register_class(PmlsFill)
     bpy.utils.register_class(PmlsMapPointsToMesh)
+    bpy.utils.register_class(PmlsSelectOutliers)
 
     bpy.utils.register_class(MessageOperator)
     bpy.utils.register_class(OkOperator)
@@ -3096,6 +3220,7 @@ def unregister():
     bpy.utils.unregister_class(PmlsDeselectAllStations)
     bpy.utils.unregister_class(PmlsExtendHedgehog)
     bpy.utils.unregister_class(PmlsMergeHedgehogs)
+    bpy.utils.unregister_class(PmlsCutBackAtBridges)
     bpy.utils.unregister_class(PmlsCreateMainCsv)
     bpy.utils.unregister_class(PmlsCreateSurveyCsvs)
     bpy.utils.unregister_class(PmlsImportCsv)
@@ -3113,6 +3238,7 @@ def unregister():
     bpy.utils.unregister_class(PmlsDelete)
     bpy.utils.unregister_class(PmlsFill)
     bpy.utils.unregister_class(PmlsMapPointsToMesh)
+    bpy.utils.unregister_class(PmlsSelectOutliers)
 
     
     bpy.utils.unregister_class(MessageOperator)
