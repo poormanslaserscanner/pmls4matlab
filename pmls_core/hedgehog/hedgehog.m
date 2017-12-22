@@ -18,7 +18,7 @@ cpntse = [[0,0,0]; cpnts ];
 try
     K = convhull( XYZ );
 catch err
-    warning( err.message );
+%    warning( err.message );
     K = zeros(0,3);
     v = zeros(0,3);
     return;

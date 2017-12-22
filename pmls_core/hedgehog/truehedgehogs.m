@@ -1,11 +1,17 @@
 function [base,rays,vid, nedges, zeroshots, erays] = truehedgehogs( base, rays, vid, edges, zeroshots, truemin, erays )
 if nargin < 6
-    truemin = 20;
+    truemin = 10;
 end
 n = numel( rays );
-hedgeindices = false(n,1);
+hedgeindices = true(n,1);
+if truemin >= 0
+    trisc = hedgehogs(base, rays, zeroshots);
+    for i = 1 : n
+        hedgeindices(i) = numel(trisc{i}) > 0;
+    end
+end
 for i = 1 : n
-    hedgeindices(i) = ( size( rays{i}, 1 ) >= truemin );  
+    hedgeindices(i) = hedgeindices(i) && ( size( rays{i}, 1 ) >= truemin );  
 end
 base = base( hedgeindices, : );
 rays = rays(hedgeindices);
