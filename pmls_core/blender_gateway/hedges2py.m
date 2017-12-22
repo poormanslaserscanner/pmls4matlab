@@ -59,7 +59,8 @@ nvt = size(vt,1);
 for i = 1 : n
     zeroshot = zeroshots{i};
     if ~isempty(zeroshot)
-        vt = [vt; sph2cart(zeroshot(1,2), zeroshot(1,3), 1) + vt(bindices(i),:)];
+        [x,y,z] = sph2cart(zeroshot(1,2), zeroshot(1,3), 1);
+        vt = [vt; [x,y,z] + vt(bindices(i),:)];
         ze = [ze;[bindices(i),size(vt,1)]];
     end
 end
