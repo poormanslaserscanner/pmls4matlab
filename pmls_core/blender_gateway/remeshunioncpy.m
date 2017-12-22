@@ -17,7 +17,7 @@ ext %#ok<NOPRT>end
 %     
 % end
 tic
-[ntris,nvt] = remeshunionc( trisc, vtc, vox, ext, cuda, marcube );
+[ntris,nvt] = remeshunionc( trisc, vtc, vox, ext, cuda, marcube, {} );
 toc
 name = '';
 for i = 1 : n

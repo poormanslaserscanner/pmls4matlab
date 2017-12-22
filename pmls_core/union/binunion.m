@@ -1,4 +1,4 @@
-function [v, bb0, grs] = binunion( trisc, vtc, par, dist, with_cuda )
+function [v, bb0, grs] = binunion( trisc, vtc, par, dist, with_cuda, Hc )
 %BINUNION Summary of this function goes here
 %   Detailed explanation goes here
 if nargin < 3
@@ -36,7 +36,11 @@ xgi = bb0( 1 ) : bb1( 1 );
 ygi = bb0( 2 ) : bb1( 2 );
 zgi = bb0( 3 ) : bb1( 3 );
 v = false( numel( xgi ), numel( ygi ), numel( zgi ) );
+%vbound = v;
 actbb = zeros(3,2);
+% if numel(Hc) == 2
+%     n = 0;
+% end
 for i = 1 : n
     fprintf('Voxelizing mesh %d of %d\n', i, n);
     if with_cuda
@@ -60,21 +64,67 @@ for i = 1 : n
         zgindex = int32( ( ( bb0s( i, 3 ) - bb0( 3 ) ) + 1 ) : ( ( bb1s( i, 3 ) - bb0( 3 ) ) + 1 ) );
         vi=surf2vol( vtc{i}, trisc{i}, xgi(xgindex), ygi(ygindex), zgi(zgindex) );
     end
-    vi = imfill(vi,6,'holes');
-    if nargin > 3
-        if dist > 0.01
-            D = bwdist(~vi);
-            vi = (D > dist );
-        elseif dist < -0.01
-            D = bwdist(vi);
-            vi = (D > -dist );
-        end
-    end
-    se = ones(2,2,2);
-    vi = imopen(vi,se);
-    v( xgindex, ygindex, zgindex ) = v( xgindex, ygindex, zgindex ) | vi;
+     vin = imfill(vi,6,'holes');
+%     vin = imfill(vi,18,'holes');
+%     vin = imfill(vi,26,'holes');
+     if numel(Hc) == 2
+         vin(vi) = false;
+     end
+     if nargin > 3
+         if dist > 0.01
+             D = bwdist(~vin);
+             vin = (D > dist );
+         elseif dist < -0.01
+             D = bwdist(vin);
+             vin = (D > -dist );
+         end
+     end
+%     se = ones(2,2,2);
+%     vi = imopen(vi,se);
+     v( xgindex, ygindex, zgindex ) = v( xgindex, ygindex, zgindex ) | vin;
+%     vbound( xgindex, ygindex, zgindex ) = vbound( xgindex, ygindex, zgindex ) | vi;
 %    v = vi;
 end
+if numel(Hc) == 2
+    base = Hc{1};
+    rays = Hc{2};
+    n = numel(rays);
+    base = base / grs - repmat(bb0,n,1);
+    for i = 1 : n
+        rays{i} = rays{i} / grs - repmat(bb0, size(rays{i},1), 1);
+        m = size(rays{i},1);
+        P0 = repmat(base(i,:), m, 1);
+        d = rays{i} - P0; 
+        Ni = floor(max(abs(d),[],2));
+        Ni(Ni<1) = 1;
+        d = d ./ repmat(Ni,1,3);
+        Ni = Ni - 2;
+        Ni(Ni < 0) = 0;
+        N = max(Ni);
+        for j = 0 : N
+            log = j <= Ni;
+            nd = d(log,:);
+            kn = 8;
+            for kk = 0 : kn-1
+                subx = floor(P0(log,:) + (j + kk / kn) * nd - 0.5) + 1;
+
+                v(sub2ind(size(v), subx(:,1), subx(:,2), subx(:,3))) = true;
+                v(sub2ind(size(v), subx(:,1) + 1, subx(:,2), subx(:,3))) = true;
+                v(sub2ind(size(v), subx(:,1), subx(:,2) + 1, subx(:,3))) = true;
+                v(sub2ind(size(v), subx(:,1), subx(:,2), subx(:,3) + 1)) = true;
+                v(sub2ind(size(v), subx(:,1) - 1, subx(:,2), subx(:,3))) = true;
+                v(sub2ind(size(v), subx(:,1), subx(:,2) - 1, subx(:,3))) = true;
+                v(sub2ind(size(v), subx(:,1), subx(:,2), subx(:,3) - 1)) = true;
+            end
+        end
+    end
+end
+if numel(Hc) == 2
+    v = imopen( v, strel('cube',2) );
+end
+%vbound(v) = false;
+%v = v | vbound;
+%v = imopen( v | (vbound & imdilate( ~(vbound|v), strel('cube',3) ) ), strel('cube',2));
 if ~with_cuda
     bb0 = bb0 + 0.5;
 end
