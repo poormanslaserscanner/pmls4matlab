@@ -1,4 +1,4 @@
-function allpnts = projfromoutside( orig, allpnts, tris, vt )
+function [allpnts, logind] = projfromoutside( orig, allpnts, tris, vt )
 %DEFORMTORAYS Summary of this function goes here
 %   Detailed explanation goes here
 ld = castrays( orig, allpnts, tris, vt );

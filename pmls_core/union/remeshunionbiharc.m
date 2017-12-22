@@ -17,18 +17,7 @@ if nargin < 10
     unilap = true;
 end
 if premesh
-    [v, bb0, grs] = binunion( trisc, vtc, bpar, bdist );
-    [nvt, elem]=v2m( v, 0.5, 2, 10, 'cgalmesh');
-    elem = elem(:,1:4);
-    nvt = nvt(:,1:3);
-    [elem, nvt] = filterrefvertices( elem, nvt );
-    nvt = ( nvt + 0.5 ) * grs + repmat( bb0, size(nvt,1),1 );
-
-    [surftris,surfvt] = getsurface( elem, nvt );
-    [surfvt,surftris]=meshcheckrepair(surfvt,surftris,'meshfix');
-    [surfvt,surftris]=meshcheckrepair(surfvt,surftris,'dup');
-    [surftris, surfvt] = filterrefvertices( surftris, surfvt );
-
+    [surftris, surfvt] = voxremesh(trisc, vtc, bpar, bdist, cuda);
 else
     surftris = trisc{1};
     surfvt = vtc{1};
@@ -40,8 +29,10 @@ basepnts = zeros(size(allpnts,1),3);
 for i = 1 : n
     basepnts( rayindices{i}, : ) = repmat( base(i,:), numel( rayindices{i} ), 1 );
 end
-projpnts = projfromoutside(basepnts,allpnts,surftris,surfvt);
-indices = revdistnn(projpnts,surfvt);
+%projpnts = projfromoutside(basepnts,allpnts,surftris,surfvt);
+%indices = revdistnn(projpnts,surfvt);
+%indices = revdistnn(allpnts,surfvt);
+indices = segmassign(basepnts, allpnts, surftris, surfvt, bpar);
 logind = ( indices > 0 );
 nsucc = nnz(logind);
 indices = indices(logind,:);
@@ -76,7 +67,7 @@ PI = nearestNeighbor(DT,handlepnts);
 handlepnts = handlepnts( ia, : );
 targetpnts = targetpnts( ia, : );
 %[nvt,elem] = tetremesh( surftris, [surfvt;handlepnts], 0.5 );
-[nvt,elem] = tetremesh( surftris, surfvt, 0.5 );
+[nvt,~] = tetremesh( surftris, surfvt, 0.5 );
 %elem = elem(:,1:4);
 %nvt = nvt(:,1:3);
 %[elem, nvt] = filterrefvertices( elem, nvt );
@@ -84,7 +75,7 @@ targetpnts = targetpnts( ia, : );
 indices = revdistnn(handlepnts,nvt);
 logind = (indices > 0 );
 
-indices = indices(logind,:);
+%indices = indices(logind,:);
 targetpnts = targetpnts(logind,:);
 handlepnts = handlepnts(logind,:);
 
@@ -105,7 +96,7 @@ handlepnts = handlepnts(logind,:);
 [indices,m] = unique(indices);
 targetpnts = targetpnts(m,:);
 handlepnts = handlepnts(m,:);
-targetpnts = handlepnts + targetpnts;% - nvt(indices,:);
+targetpnts = handlepnts + targetpnts - nvt(indices,:);
 %a = dot( a, targetpnts, 2 ) ./ dot(targetpnts,targetpnts,2);
 %a = max( min(a,1), 0 );
 %targetpnts = targetpnts .* [a,a,a];
@@ -116,7 +107,7 @@ if unilap
 else
     hvt = deform(elem,nvt,indices,targetpnts, 2 );
 end
-%hvt = hvt + nvt;
+hvt = hvt + nvt;
 n = size(elem,1);
 logind = true(n,1);
 parfor i = 1 : n
@@ -129,7 +120,78 @@ end
 elem = elem( logind,:);
 [elem, hvt] = filterrefvertices( elem, hvt );
 [ntris,nvt] = getsurface( elem, hvt );
-[ntris,nvt] = remeshunionc({ntris},{nvt}, bpar, bdist, cuda, marcube);
+[ntris,nvt] = remeshunionc({ntris},{nvt}, bpar, bdist, cuda, marcube, {});
 end
 
+function [surftris, surfvt] = voxremesh(trisc, vtc, bpar, bdist, cuda)
+    [v, bb0, grs] = binunion( trisc, vtc, bpar, bdist, cuda, {} );
+    [nvt, elem]=v2m( v, 0.5, 2, 10, 'cgalmesh');
+    elem = elem(:,1:4);
+    nvt = nvt(:,1:3);
+    [elem, nvt] = filterrefvertices( elem, nvt );
+    nvt = ( nvt + 0.5 ) * grs + repmat( bb0, size(nvt,1),1 );
 
+    [surftris,surfvt] = getsurface( elem, nvt );
+    [surfvt,surftris]=meshcheckrepair(surfvt,surftris,'meshfix');
+    [surfvt,surftris]=meshcheckrepair(surfvt,surftris,'dup');
+    [surftris, surfvt] = filterrefvertices( surftris, surfvt );
+
+end
+
+% function indices = segmassign45(basepnts, allpnts, surftris, surfvt, bpar)
+% projpnts = projfromoutside(basepnts,allpnts,surftris,surfvt);
+% d = allpnts - projpnts; 
+% Ni = floor(sqrt(dot(d,d,2)) / (bpar / 100));
+% d = d ./ repmat(Ni,1,3);
+% N = max(Ni);
+% pnts = projpnts;
+% n = size(pnts,1);
+% prank = zeros(n,1);
+% pindices = (1:n)';
+% for j = 1 : N
+%     log = j <= Ni;
+%     nd = d(log,:);
+%     indices = find(log);
+%     k = numel(indices);
+%     pnts = [pnts; projpnts(indices,:) + j * nd ];
+%     prank = [prank; repmat(j, k, 1)];
+%     pindices = [pindices; indices];
+% end
+% indices0 = revdistnn(pnts,surfvt);
+% logind = indices0 > 0;
+% indices = zeros(n,1);
+% for i = 1 : n
+%     i_indices = find(logind & (pindices == i));
+%     if numel(i_indices) > 0
+%         [~,maxi] = max(prank(i_indices));
+%         indices(i) = indices0(maxi);
+%     end    
+% end
+% end
+
+function indices = segmassign(basepnts, allpnts, surftris, surfvt, bpar)
+projpnts = projfromoutside(basepnts,allpnts,surftris,surfvt);
+d = -(allpnts - projpnts); 
+Ni = floor(sqrt(dot(d,d,2)) / (bpar / 100));
+d = d ./ repmat(Ni,1,3);
+N = max(Ni);
+pnts = allpnts;
+indices = revdistnn(pnts,surfvt);
+logind = indices > 0;
+pnts(logind,:) = surfvt(indices(logind),:);
+for j = 1 : N
+    log = indices == 0;
+    k = nnz(log);
+    if k == 0
+        break;
+    end
+    log = j <= Ni  & log;
+    nd = d(log,:);
+    actindices = find(log);
+    actpnts = pnts;
+    actpnts(actindices,:) = allpnts(actindices,:) + j * nd;
+    indices = revdistnn(actpnts,surfvt);
+    logind = indices > 0;
+    pnts(logind,:) = surfvt(indices(logind),:);
+end
+end
