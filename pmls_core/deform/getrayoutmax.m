@@ -14,6 +14,8 @@ for i = 1 : n
     d = rays{i} - P0; 
     Ni = floor(sqrt(dot(d,d,2)) / (voxsiz / 100));
     d = d ./ repmat(Ni,1,3);
+    Ni = Ni - 2;
+    Ni(Ni < 0) = 0;
     N = max(Ni);
     for j = 1 : N
         log = j <= Ni;
@@ -28,7 +30,7 @@ sd = signed_distance(pnts, vt, tris, 'SignedDistanceType', 'winding_number');
 log = sd > -voxsiz/500;
 sprintf('cs2: %f', sum(sd(sd > 0)))
 pnts = pnts(log,:) + rnds(log,:);
-points2ply(pnts,'takk.ply');
+%points2ply(pnts,'takk.ply');
 return;
 [v, bb0, grs] = binunion( {tris}, {[vt;cell2mat(rays)]}, voxsiz, 0.25 );
 v = bwdist(v);

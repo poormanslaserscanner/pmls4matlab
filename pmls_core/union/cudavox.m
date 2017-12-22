@@ -7,7 +7,7 @@ bbox(:,2) = bbox(:,2) - c';
 vt = vt - repmat(c, size(vt,1),1);
 tris = tris';
 trpnts = (single(vt(tris(:),:)))';
-if (nargin < 4)
+if (nargin < 3)
     bbox = int32([floor(min(trpnts,[],2)), ceil(max(trpnts,[],2))]);
 else
     bbox = int32([floor(bbox(:,1)), ceil(bbox(:,2))]);
