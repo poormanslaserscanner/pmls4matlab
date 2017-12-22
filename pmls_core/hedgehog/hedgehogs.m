@@ -10,7 +10,7 @@ vtc = cell(n,1);
 %        [trisc{i}, vtc{i}] = hedgehog( xcell{i}, base(i,:) );
 %    end
 %else
-    for i = 1 : n
+    parfor i = 1 : n
         angles = zeroshots{i};
         if numel( angles ) > 0
             [trisc{i}, vtc{i}] = hedgehog( xcell{i}, base(i,:), angles(1,2), angles(1,3) );
