@@ -36,7 +36,7 @@ setup
 ```
 ## Usage
 ### Preparing input data
-PMLS uses an input file structure based on CSV files. The input structure is to have a main CSV file that references the CSV files of different surveys called survey CSV files. For each survey CSV file a unique survey Id is defined and magnetic declination may be set. The format of these files follow the table structure of the TopoDroid sqlite database (namely the columns of the "shots" table). In the CSV files the '|' character has to be used as delimeter. For some examples see the testdata directory.
+PMLS uses an input file structure based on CSV files. The input structure is to have a main CSV file that references the CSV files of different surveys called survey CSV files. For each survey CSV file a unique survey Id is defined and magnetic declination may be set. The format of these files follow the table structure of the TopoDroid sqlite database (namely the columns of the "shots" table). In the CSV files the '|' character has to be used as delimeter. For some examples see the [testdata](testdata) directory.
 #### The main CSV file
 The first line is assumed to be a header and will be skipped. The main CSV file has the following fields:
 1. Id: Unique identifier of the survey. If the id is `xyz` then the name of the corresponding survey CSV file is `xyz.csv` 
@@ -73,11 +73,11 @@ The output ```H``` is a special struct that will be used in the further steps. W
 ```matlab
 M = pmlsrecon(H, vox1, vox2, ...);
 ```
-Outlier measurements will be automatically removed and the surface reconstruction will be done based on the remaining shots. The reconstruction is performed in several steps starting with a coarser step followed with steps trying to recover finer details. The number of the ```vox1, vox2,...``` parameters determines the number of steps and the values give the level of detail in voxel size for the corresponding steps. Voxel sizes should be given in centimeters. In the testdata for Speizi and Ferenc 
+Outlier measurements will be automatically removed and the surface reconstruction will be done based on the remaining shots. The reconstruction is performed in several steps starting with a coarser step followed with steps trying to recover finer details. The number of the ```vox1, vox2,...``` parameters determines the number of steps and the values give the level of detail in voxel size for the corresponding steps. Voxel sizes should be given in centimeters. In the case of the [test data sets](testdata) for [Speizi](testdata/speizi) and [Ferenc](testdata/ferenc) 
 ```matlab
 M = pmlsrecon(H, 4, 3);
 ```
-For Legeny:
+For [Legeny](testdata/legeny):
 ```matlab
 M = pmlsrecon(H, 6, 5);
 ```
