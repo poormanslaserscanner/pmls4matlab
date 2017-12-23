@@ -1,0 +1,1238 @@
+POLYGON Cave Surveying Software
+Polygon Program Version   = 2
+Polygon Data File Version = 1
+1998-2001 ===> Prepostffy Zsolt
+-------------------------------
+
+*** Project ***
+Project name: Legény-barlang
+Project place: Pilis-csoport
+Project code: 4840
+Made by: Kovács Richárd ARIADNE KBE
+Made date: 40605.5617583681
+Last modi: 6.85862127183077E-317
+AutoCorrect: 0
+AutoSize: 34.1880341880342
+
+*** Surveys ***
+Survey name: 2011.03.03.
+Survey team: ARIADNE KBE
+Kovács Richárd	Mérés
+Szabó Fruzsina	Fúrás
+	
+	
+	
+Survey date: 40605.5698484722
+Declination: 3.87
+Instruments: 
+DistoX (0.27)	0
+DistoX (0.27)	0
+DistoX (0.27)	0
+Fix point: 0
+634758.814	261754.73	459.814	0	0	0	0
+Survey data
+From	To	Length	Azimuth	Vertical	Label	Left	Right	Up	Down	Note
+0	1	4.025	65.4	16.5		0	0	0	0	kürtõ felmászásban csavar
+1	2	10.424	86.7	-5.4		0	0	0	0	kis hosszúkás kõtömb él csavar
+2	2A	3.73	45.3	57.2		0	0	0	0	oldal kürtõ jobb oldal kiálló csavar
+2A	2B	3.436	2.9	49.4		0	0	0	0	hasadék vége vesztett
+2	3	3.86	90.3	1.6		0	0	0	0	oldafülke elõtt kõcsúcs csavar
+3	3A	3.827	39.6	-17.5		0	0	0	0	oldalfülke vízszintes hasadék vesztett
+3	4	3.188	130.2	-16.9		0	0	0	0	járatközép kis kõtömb csavar
+4	5	5.743	84.3	-4.7		0	0	0	0	Potya-út kezdet perem él csavar
+5	6	2.904	129.3	37.2		0	0	0	0	bal fal kürtõ alatt csavar
+6	7	3.194	164.8	8.3		0	0	0	0	bal fal csavar
+7	8	2.425	183	50.3		0	0	0	0	hasadék jobb fal csavar
+8	9	1.336	139.2	57		0	0	0	0	jobb fal kiálló elágazás csavar
+9	Pf1	2.915	337.3	35.8		0	0	0	0	jobb oldal kiálló csavar
+Pf1	Pf2	1.788	322.9	22.6		0	0	0	0	bal fal cseppkõ oldala csavar
+Pf2	Pf3	1.798	346.1	32.7		0	0	0	0	átmászás után középen kõtömb csavar
+Pf3	Pf4	1.752	276.8	35.5		0	0	0	0	jobb fal kanyarban csavar
+Pf4	Pf5	1.921	21.7	-23.9		0	0	0	0	bal fal cseppkõ él elágazás csavar
+Pf5	Pf6	1.284	10.1	13.3		0	0	0	0	jobb fal él csavar
+Pf6	Pf7	2.94	324.3	25.3		0	0	0	0	jobb fal kiálló csavar
+Pf7	Pf8	2.158	335.9	44.7		0	0	0	0	jobb fal kanyarban csavar
+Pf8	Pf9	0.925	270	-4.6		0	0	0	0	bal fal él csavar
+Pf5	Pf5A	3.641	88.8	-67.4		0	0	0	0	bal fal párkány csavar
+Pf5A	Pf5B	1.613	196.4	-29.5		0	0	0	0	letörés elõtt jobb fal csavar
+Pf5B	6	3.006	116.9	-73.5		0	0	0	0	bal fal kürtõ alatt csavar
+9	10	0.928	151.2	18.6		0	0	0	0	Pénztár kezdet mennyezet csavar
+10	11	2.222	73.3	-30.3		0	0	0	0	szûkület vége jobb fal él csavar
+11	12	3.224	10	-45.2		0	0	0	0	akna kezdet bal oldal csavar
+12	13	4.953	115	-60.3		0	0	0	0	akna alja jobb fal csavar
+13	14	2.7	80.2	4.4		0	0	0	0	kanyar kõél csavar
+14	15	2.681	83.1	25		0	0	0	0	Betyár kezdet bal cseppkõél csavar
+13	13A	5.365	24.7	-2.1		0	0	0	0	jobb fal csavar
+13A	13B	8.182	297.8	-0.3		0	0	0	0	kõtömb oldal él csavar
+13B	13C	2.712	296.5	20.2		0	0	0	0	mennyezet elágazás csavar
+13C	13D	2.483	276.6	-7.6		0	0	0	0	bal oldalt kõtömb csavar
+13D	13E	3.416	334.5	-7.7		0	0	0	0	fülke vége vesztett
+13C	13C1	2.933	202.9	5.7		0	0	0	0	jobb oldalt kõtömb csavar
+13C1	5	2.003	156.7	37.1		0	0	0	0	Potya-út kezdet perem csavar
+13	De1	4.154	279.3	-10		0	0	0	0	nagy kõtömb bubó csavar
+De1	De2	2.881	215	-17.1		0	0	0	0	lekanyar jobb fal csavar
+De2	De3	1.86	155.4	-38.2		0	0	0	0	bal fal él csavar
+De3	De4	2.807	211.4	-12.9		0	0	0	0	szûkület után bal fal csavar
+De4	De5	5.532	209.2	-28.7		0	0	0	0	jobb fal letörés elõtt csavar
+De5	De6	2.644	188.4	-59		0	0	0	0	letörés alja bal fal csavar
+De6	De7	0.841	225.3	0.1		0	0	0	0	átbújó mennyezet csavar
+De7	De7A	2.322	280.8	53.4		0	0	0	0	füstös hasadék vesztett
+De7	De8	2.131	167.7	-23.9		0	0	0	0	átbújás után bal fal csavar
+De8	De9	2.492	242.1	-14.7		0	0	0	0	akna kezdet mennyezet csavar
+10	Pa1	2.492	196.4	-21.5		0	0	0	0	bal fal kanyarban csavar
+Pa1	Pa2	1.998	254.5	-44.4		0	0	0	0	jobb fal belógó csavar
+Pa2	Pa3	2.876	185.9	-29.6		0	0	0	0	jobb fal csavar
+Pa3	Pa4	1.724	115.9	-26.1		0	0	0	0	letörés elõtt bal fal csavar
+Pa4	Pa5	1.14	243.7	-70		0	0	0	0	letörés falában csavar
+Pa5	Pa6	1.708	188.4	-6.3		0	0	0	0	jobb fal csavar
+Pa6	Pa7	2.122	130.2	-46.1		0	0	0	0	Bendõ kezdet bal fal csavar
+Pa7	Pa8	0.796	188.1	-14.1		0	0	0	0	bal fal csavar
+Pa8	Pa9	4.963	181.7	-14.3		0	0	0	0	Bendõ vége bal fal él csavar
+Pa9	Pa10	2.438	170.5	-25.9		0	0	0	0	jobb fal él csavar
+Pa10	Pa11	3.528	138.7	-32		0	0	0	0	középen lelógó csavar
+Pa11	Pa12	1.014	166.7	-42.6		0	0	0	0	bal fal él csavar
+Pa12	Pa13	1.994	198.3	-2.1		0	0	0	0	bal fal kiugró csavar
+Pa13	Pa14	5.013	223.3	1.2		0	0	0	0	bal fal kanyar elõtt csavar
+Pa14	Pa15	1.169	312.4	-4.7		0	0	0	0	jobb fal kanyarban csavar
+Pa15	Pa16	2.716	207	-1.4		0	0	0	0	bal fal cseppkõ él csavar
+Pa16	Pa17	1.515	211.4	-15.1		0	0	0	0	jobb fal él csavar
+Pa17	Pa18	1.588	155.6	-24.1		0	0	0	0	bal fal régi végpont csavar
+Pa18	Pa19	1.257	234.8	-28		0	0	0	0	jobb fal csavar
+Pa19	Pa20	3.037	206.9	-13.6		0	0	0	0	jobb fal kiugró csavar
+Pa20	Pa21	1.634	175.7	10.2		0	0	0	0	jobb fal felbújásban csavar
+Pa21	Pa22	0.745	136.3	1.4		0	0	0	0	kis állócseppkõ csavar
+Pa22	Pa22A	2.193	200.1	-4.2		0	0	0	0	fülke vége középen vesztett
+Pa22	Pa23	3.004	77.2	4.8		0	0	0	0	jobb fal él csavar
+Pa23	Pa24	2.474	79.3	-27.6		0	0	0	0	összekötés bal fal él csavar
+
+Survey name: 2011.03.09.
+Survey team: ARIADNE-SZÖBE
+Kovács Richárd	Mérés
+Slíz György	
+	
+	
+	
+Survey date: 40611.5698484722
+Declination: 3.87
+Instruments: 
+DistoX (0.24)	0
+DistoX (0.24)	0
+DistoX (0.24)	0
+Fix point: 
+6.91981624272466E-317	6.9198597205015E-317	6.91989726949058E-317	6.9197411447465E-317	6.919753002322E-317	6.91976683616008E-317	6.91977869373558E-317
+Survey data
+From	To	Length	Azimuth	Vertical	Label	Left	Right	Up	Down	Note
+De9	De10	3.292	195	-56.8		0	0	0	0	jobbra kiágazás csavar
+De10	De11	2.506	153	-51.7		0	0	0	0	bal fal csücsök elágazás csavar
+De11	De12	3.988	193.1	-55.5		0	0	0	0	akna forduló mennyezet belógó elágazás csavar
+De12	De12A	2.133	266.3	13.6		0	0	0	0	bal fal él elágazás csavar
+De12A	De12A1	2.513	348.6	36.4		0	0	0	0	ferde fal csavar
+De12A1	De12A2	1.55	108.2	53.3		0	0	0	0	nagy kõtömb csúcsa csavar
+De12A2	De11	2.246	72.6	1.1		0	0	0	0	bal fal csavar körbezár
+De12A1	De12AA	3.079	16.3	56.8		0	0	0	0	csõjárat kanyarban vesztett
+De12AA	De10	1.931	87.5	20.744		0	0	0	0	körbezár otthon bevitt
+De12A	De12B	1.803	272.7	65.3		0	0	0	0	mennyezet csavar
+De12B	De12C	1.081	280	10.2		0	0	0	0	bal fal csavar
+De12C	De12D	2.341	337.1	28.6		0	0	0	0	bal fal csavar
+De12D	De12E	2.496	47.4	28.7		0	0	0	0	jobb fal csavar
+De12E	De12F	1.314	340	10.6		0	0	0	0	járhatatlan vesztett
+De12	De13	4.881	87.5	-38.5		0	0	0	0	akna felett kiálló csavar
+De13	De13A	4.971	113.6	-2.9		0	0	0	0	akna túloldalt jobb csavar
+De13A	De13B	0.992	116.9	-19.3		0	0	0	0	jobb fal cseppkõ alatt vesztett
+De13B	De13C	1.699	61	-0.5		0	0	0	0	járat vége vesztett
+De13	De14	2.768	246.5	-83.8		0	0	0	0	aknában kiálló csavar
+De14	De14A	2.976	348	10.1		0	0	0	0	bal fal elágazás csavar
+De14A	De14B	2.735	326.4	52.2		0	0	0	0	jobb fal kanyarban csavar
+De14B	De14C	3.394	275.1	-2.6		0	0	0	0	jobb fal csavar
+De14C	De14D	1.023	279.6	18.7		0	0	0	0	bal fal csavar
+De14D	De14E	1.441	289	-11.3		0	0	0	0	jobb fal elágazás csavar
+De14E	De14F	4.513	281.9	-1.6		0	0	0	0	jobb fal él csavar
+De14F	De14G	3.495	281.6	5		0	0	0	0	szûkülés elõtt bal fal vesztett
+De14G	De14H	0.971	294.3	-5.9		0	0	0	0	vége vesztett
+De14E	De14E1	1.748	167.6	-52.8		0	0	0	0	lebújásban jobb rész csavar
+De14E1	De14EE	2.865	95.9	-30.7		0	0	0	0	vissza hasadék vesztett
+De14E1	De14E2	4.767	249.5	-51.3		0	0	0	0	bal fal akna kezdet csavar
+De14E2	De14E3	3.357	250.3	-59.4		0	0	0	0	akna párkány perem csavar
+De14E2	De14E2A	4.331	270.6	-2.5		0	0	0	0	hasadék vége vesztett
+De14A	De14A1	2.039	92.8	46		0	0	0	0	jobb fal átbújás elõtt csavar
+De14A1	De14A2	1.222	120.5	18.3		0	0	0	0	átbújás után jobb fal csavar
+De14A2	De14A3	1.701	73.01	-42.7		0	0	0	0	jobb fal csavar
+De14A3	De14A4	1.283	32	6.9		0	0	0	0	mennyezet akna csavar
+De14	De15	9.461	53.5	-75.2		0	0	0	0	akna alja kõtömb él csavar
+De15	De15A	3.473	141.4	-10.5		0	0	0	0	nagy lapos kõtömb csavar
+De15A	De15B	2.906	108.7	25.7		0	0	0	0	kõtömb teteje csavar
+De15B	De15B1	3.363	93.8	14		0	0	0	0	mennyezet csavar
+De15B	De15C	2.553	142.5	31		0	0	0	0	szûkület kezdet jobb fal csavar
+De15	De16	7.048	260.2	-13.3		0	0	0	0	nagy kõtömb kiálló csavar
+De16	De17	4.51	204	-53.3		0	0	0	0	kõtömb kiálló csavar
+De17	De18	3.376	198.7	-47		0	0	0	0	kõtömb él csavar
+De18	De19	3.032	188.9	-45.1		0	0	0	0	kõtömb teteje csavar
+De19	De20	3.882	131.8	-37.4		0	0	0	0	üstös kõtömb csúcs csavar
+De20	De21	2.604	204.6	-3.7		0	0	0	0	mennyezet belógó csavar
+De21	De22	3.753	244.7	-4.9		0	0	0	0	bal fal él csavar
+De22	De23	3.669	199.8	-30.2		0	0	0	0	kõtömb teteje csavar
+De23	De24	2.833	213.6	-18.3		0	0	0	0	kõtömb csúcs csavar
+De24	De25	1.367	241.2	-41.3		0	0	0	0	kõtömb elágazás csavar
+De25	Se1	6.295	182.9	21.21		0	0	0	0	nagy kõtömb tetején él csavar
+Se1	Se2	4.884	205.7	19.4		0	0	0	0	bal fal kiálló elágazás csavar
+Se2	Se3	3.944	245	21.7		0	0	0	0	jobb fal csavar
+Se3	Se4	4.092	202.2	21.1		0	0	0	0	felkanyarodás bal fal csavar
+Se4	Se5	2.126	309.5	54.3		0	0	0	0	elágazás él csavar
+Se5	Se5A	1.389	347.8	48.5		0	0	0	0	kürtõ kanyar vesztett
+Se5A	Se5B	2.228	214.3	28		0	0	0	0	függõ cseppkõ vesztett
+Se5	Se6	1.663	208.3	-10.6		0	0	0	0	bal fal él csavar
+Se6	Se5B	2.695	316.7	73.9		0	0	0	0	függõ cseppkõ vesztett
+Se6	Se7	3.669	227.7	21		0	0	0	0	nagy kõtömb csavar
+Se7	Se8	1.751	221.2	3.8		0	0	0	0	szûkülés bal fal cseppkõ csavar
+Se8	Se9	1.274	269.8	2.9		0	0	0	0	jobb fal szûkületben csavar
+Se9	Se10	1.065	222.9	35.9		0	0	0	0	jobb cseppköves kiálló csavar
+Se10	Se11	2.737	247.6	50.1		0	0	0	0	hasadék után bal fal él csavar
+Se11	Se12	1.293	259.6	34.5		0	0	0	0	cseppkõ él csavar
+Se12	Se12A	2.23	269	26.2		0	0	0	0	jobb fal él vesztett
+Se12A	Se12B	1.434	233.6	15.3		0	0	0	0	vége vesztett
+Se12	Se13	3.254	15.8	56.4		0	0	0	0	kürtõ elágazás csavar
+Se13	Se13A	2.723	68.6	50.9		0	0	0	0	jobb kürtõ vége vesztett
+Se13	Se14	1.259	250.2	24.9		0	0	0	0	csõ fölött vesztett
+Se14	Se15	1.923	264.3	51.7		0	0	0	0	vége vesztett
+Se14	Se14A	1.885	199.5	-76.9		0	0	0	0	kefelé csõ vesztett
+Se11	Se11A	1.424	42.8	56.7		0	0	0	0	jobb fal kiálló csavar
+Se11A	Se11B	2.405	54.6	-7.4		0	0	0	0	bal fal él csavar
+Se11B	Se7	4.425	72	-59.3		0	0	0	0	nagy kõtömb csavar
+Se2	Se2A	3.646	335.5	46.4		0	0	0	0	kürtõ felmenet csavar
+Se2A	Se2B	2.122	44.3	54.6		0	0	0	0	jobb fal csavar
+Se2B	Se2C	1.274	311.6	48.4		0	0	0	0	kõtömb teteje csavar
+Se2C	Se2C1	3.66	199.3	30.1		0	0	0	0	balra vége vesztett
+
+Survey name: 2011.03.10.
+Survey team: ARIADNE KBE
+Kovács Richárd	Mérés
+Szabó Fruzsina	Fúrás
+	
+	
+	
+Survey date: 40612.5698484722
+Declination: 3.87
+Instruments: 
+DistoX (0.28)	0
+DistoX (0.28)	0
+DistoX (0.28)	0
+Fix point: 
+0	0	0	0	0	0	0
+Survey data
+From	To	Length	Azimuth	Vertical	Label	Left	Right	Up	Down	Note
+De19	Ny1	6.576	294.7	-1.6		0	0	0	0	szembe fal elágazás csavar
+Ny1	Ny2	1.507	30	-9.4		0	0	0	0	kis kõ lefolyásban csavar
+Ny2	Ny3	2.8	269.7	-24.1		0	0	0	0	mennyezet csücsök csavar
+Ny3	Ny4	5.034	236	-27.9		0	0	0	0	nagy kõél csavar
+Ny4	Ny5	1.327	186.6	-20.3		0	0	0	0	mennyezet él csavar
+Ny5	Ny6	2.522	259.8	-36.7		0	0	0	0	mennyezet belógó csavar
+Ny6	Ny7	1.571	326.9	-19.1		0	0	0	0	jobbra kõtömb elágazás csavar
+Ny7	Ny8	4.064	262.6	-12.1		0	0	0	0	átjáró jobb fal csavar
+Ny8	Ny9	2.992	241.5	-17.3		0	0	0	0	nagy kõtömb él csavar
+Ny9	Ny10	4.167	259.3	-2.7		0	0	0	0	jobbra kõtömb él csavar
+Ny10	Ny11	4.685	214.2	8.1		0	0	0	0	jobbra nagy kõtömb csúcs csavar
+Ny11	Ny12	2.96	224.5	-32.1		0	0	0	0	nagy kõtömb él csavar
+Ny12	Ny13	4.488	265.9	-27.8		0	0	0	0	gyertya mellett kõtömb csavar
+Ny13	Ny14	7.555	260.6	14.4		0	0	0	0	szûkülés jobb fal csavar
+Ny14	Ny15	2.076	227.6	25.5		0	0	0	0	szûkülésnél vesztett
+De25	De26	3.55	131.2	-16.6		0	0	0	0	átjáró vége kõtömb alja csavar
+De26	De27	3.11	93.7	-26.1		0	0	0	0	lejáró nagy kõtömb bal oldal csavar
+De27	De28	2.485	123.2	-35.2		0	0	0	0	nagy kõtömb csúcs csavar
+De28	De29	3.21	116.9	-32.1		0	0	0	0	kõtömb csúcs elágazás csavar
+De29	De30	3.964	209.2	1.5		0	0	0	0	kõtömb él csavar
+De30	De31	4.559	169.5	-20.2		0	0	0	0	bal fal kiugró csavar
+De31	De32	2.88	197.5	-10		0	0	0	0	akna kezdet elágazás jobb oldal csavar
+De32	De33	1.509	240.3	57		0	0	0	0	jobb fal járat kezdett csavar
+De33	De34	3.413	200.4	-64.9		0	0	0	0	bal fal lecsúszásban csavar
+De34	De35	2.951	229.7	-40.8		0	0	0	0	bal fal kiálló csavar
+De35	De36	3.516	195.4	-54.2		0	0	0	0	cseppköves jobb fal csavar
+De36	De37	2.67	154.4	-27.7		0	0	0	0	lekanyar fölött ferde fal csavar
+De37	De37A	3.987	77.5	39.1		0	0	0	0	felfelé vége vesztett
+De37	De38	2.271	178	-58.4		0	0	0	0	jobb fal csavar
+De38	De39	2.199	137.4	-21.6		0	0	0	0	bal fal él csavar
+De39	De39A	1.611	266.3	26.4		0	0	0	0	kis járat kezdet vesztett
+De39A	De39B	1.594	180	6.8		0	0	0	0	elszûkülés vesztett
+De39	De40	1.252	188	-31.3		0	0	0	0	mennyezet kanyar csavar
+De40	De40A	2.711	56.4	29.9		0	0	0	0	felfelé vége vesztett
+De40	De41	2.565	277	-42.4		0	0	0	0	jobb oldal kiálló csavar
+De41	De41A	0.581	285.4	29.1		0	0	0	0	cseppkõ csücsök vesztett
+De41A	De41B	2.724	19.3	52		0	0	0	0	vissza járat vesztett
+De41	De41-1	1.094	50.1	-21.1		0	0	0	0	alsó járat bejárat vesztett
+De41-1	De41-2	1.58	4.2	37.4		0	0	0	0	járat vége vesztett
+De41	De42	3.146	173.2	-65.2		0	0	0	0	lecsúszásban jobb oldal csavar
+De42	De43	2.123	154	-27.5		0	0	0	0	kibújás bal fal él csavar
+De43	De44	2.157	167.8	-28.5		0	0	0	0	folyosó középen kis kõtömb csavar
+De44	De45	3.847	201.5	40.5		0	0	0	0	nagy kõtömb csavar
+De45	De46	5.185	206.3	23.8		0	0	0	0	állócseppkõ mögött kõtömb csavar
+De46	De46A	3.321	161.5	29.8		0	0	0	0	jobb mennyezet él csavar
+De46A	De46B	1.143	176.2	25		0	0	0	0	jobb oldal kiálló elágazás csavar
+De46B	De46C	4.115	154.7	34		0	0	0	0	kõtömb kiálló csavar
+De46C	De46C1	6.96	214	25.3		0	0	0	0	jobbra terem vége vesztett
+De46	De47	4.547	259.4	13.4		0	0	0	0	kõtömb él csavar
+De47	De47A	3.272	208.7	-1.4		0	0	0	0	terem vége vesztett
+De44	De44-1	3.198	44.3	-18.5		0	0	0	0	tömb csúcs csavar
+De44-1	De44-2	7.919	53.5	6.8		0	0	0	0	fal csavar
+De29	De29-1	5.866	47.4	-4.6		0	0	0	0	ferde fal csavar
+De29-1	De29-2	3.157	150.9	-33.1		0	0	0	0	lemászás után mennyezet csavar
+
+Survey name: 2011.03.15.
+Survey team: ARIADNE KBE
+Kovács Jenõ	Fúrás
+Kovács Richárd	Mûszer leolvasása
+Krekk Ivett	Jegyzõkönyv vezetés
+	
+	
+Survey date: 40617.5698484722
+Declination: 3.87
+Instruments: 
+DistoX (0.19)	0
+DistoX (0.19)	0
+DistoX (0.19)	0
+Fix point: 
+0	0	0	0	0	0	0
+Survey data
+From	To	Length	Azimuth	Vertical	Label	Left	Right	Up	Down	Note
+De29-2	V1	1.319	194.3	-28.1		0	0	0	0	mennyezet él csavar
+V1	V2	3.238	201.9	-66.4		0	0	0	0	kõtömb oldala lemászásban csavar
+V2	V3	5.365	245.1	-34.9		0	0	0	0	mennyezet él csavar
+V3	V4	4.776	206.7	-39.1		0	0	0	0	elválasztó nagy kõtömb csavar
+V4	V5	2.318	160.1	-33.5		0	0	0	0	kürtõ alatt kõben csavar
+V5	V6	6.538	266.4	-25.3		0	0	0	0	terem alsó rész kõben csavar
+V6	V7	6.459	302.2	-1.3		0	0	0	0	lemenet elõtt elágazás
+V7	M1	3.336	245.8	-29.2		0	0	0	0	jobb nagy kõtömb él karcolt
+M1	M2	4.112	239.2	-62.5		0	0	0	0	aljzat kiálló karcolt
+M2	M3	1.508	146.4	6.6		0	0	0	0	szembe fal elágazás karcolt
+M3	M3A	1.951	255	-39.2		0	0	0	0	lecsúszás elõtt karcolt
+M3A	M3B	1.727	209.5	-48		0	0	0	0	lent átbújás mennyezet karcolt
+M3A	M3AA	4.36	224.4	58.5		0	0	0	0	fenti fülke vége szemben vesztett
+M3	M3-1	1.991	96.4	52.2		0	0	0	0	felmászás után mennyezet karcolt
+M3-1	M3-2	5.031	114.3	-0.4		0	0	0	0	lefolyás mellett fülke vége vesztett
+M3	M4	1.839	108.9	-55.4		0	0	0	0	aljzat karcolt
+M4	M4A	2.415	209.6	-15.3		0	0	0	0	bal fal karcolt
+M4A	M4B	4.256	248.7	-16.7		0	0	0	0	agyagos aljzat vesztett
+M4A	M3B	2.171	297	-9.9		0	0	0	0	mennyezet karcolt
+M4	M5	1.608	50.8	-53.5		0	0	0	0	kis kerülõ aljzat karcolt
+M5	M6	2.545	120.9	1.9		0	0	0	0	belógó mennyezet karcolt
+M5	M5A	3.148	197.1	-43.6		0	0	0	0	lebújás vége karcolt
+M6	M7	2.284	169	-49		0	0	0	0	aljzat karcolt
+M7	M7A	2.963	228.2	-11		0	0	0	0	nagy kõtömb karcolt
+M7A	M5A	2.711	338.9	0.6		0	0	0	0	aljzat karcolt
+M7	M8	2.26	145.3	-6.3		0	0	0	0	nagy kiálló karcolt
+M8	M8A	2.227	124.3	-24.6		0	0	0	0	jobb fal belógó karcolt
+M8A	M8B	2.012	230	-73.3		0	0	0	0	alja luk mellett vesztett
+M8A	M8A1	5.211	80.5	20.4		0	0	0	0	bal vége szemben vesztett
+M8	M9	0.998	293.116	-71.784		0	0	0	0	akna felett mennyezet karcolt
+M9	M10	2.092	93.6	-60.8		0	0	0	0	akna alja oldalt karcolt
+M10	M11	2.845	251.2	-26.7		0	0	0	0	tó közepe fölött jobb fal él vesztett
+M11	M12	1.411	252.4	-36		0	0	0	0	alja vége vesztett
+V7	V8	10.703	289.2	22.4		0	0	0	0	felmászás után mennyezet csúcs csavar
+V8	V9	3.668	298	13.7		0	0	0	0	teremben cseppkõ teteje karcolt
+V9	V9A	4.744	12.4	16.1		0	0	0	0	kõtömb csúcs
+V9A	V9B	2.471	23.6	17.5		0	0	0	0	terem kõcsúcs
+V9B	V9C	6.809	329.5	17.9		0	0	0	0	ferde jobb fal csavar
+V9C	V9D	4.164	53.8	64.4		0	0	0	0	omladék vég vesztett
+
+Survey name: 2011.03.20.
+Survey team: ARIADNE KBE
+Hegyessy Tamás	Fúrás
+Kovács Jenõ	Jegyzõkönyv vezetés
+Kovács Richárd	Mûszer leolvasása
+	
+	
+Survey date: 40622.5698484722
+Declination: 3.87
+Instruments: 
+DistoX (0.24)	0
+DistoX (0.24)	0
+DistoX (0.24)	0
+Fix point: 
+0	0	0	0	0	0	0
+Survey data
+From	To	Length	Azimuth	Vertical	Label	Left	Right	Up	Down	Note
+De47	De48	6.66	335.3	67.4		0	0	0	0	hasadékfalban csavar
+De48	De49	3.416	184	81.9		0	0	0	0	kiszállásnál csavar
+De49	De50	2.203	242.9	51.1		0	0	0	0	hasadék jobb fal csavar
+De50	De51	5.285	227.5	32.6		0	0	0	0	bal fal cseppkõ csavar
+De51	De52	1.103	222.3	1.9		0	0	0	0	bal fal kanyar csavar
+De52	De53	2.12	305.7	20.5		0	0	0	0	fülkében jobb fal csavar
+De53	De54	2.434	224.8	-20.9		0	0	0	0	bontás vesztett
+De44-2	De44-2A	2.027	158.2	7.2		0	0	0	0	fülke eleje bal fal él csavar
+De44-2A	De44-2B	2.784	183.8	21.9		0	0	0	0	jobbra vége vesztett
+De44-2	De44-3	2.828	78.7	84.7		0	0	0	0	felmászás jobb fal csavar
+De44-3	De44-4	4.206	15.8	59.5		0	0	0	0	bal fal csavar
+De44-4	De44-5	5.484	71.7	48.8		0	0	0	0	átbújás után jobb fal csavar
+De44-5	De44-6	2.244	73.2	53.3		0	0	0	0	jobb fal csavar
+De44-6	De44-7	4.536	355.9	66.9		0	0	0	0	bal fal felmászás teteje csavar
+De44-7	De44-8	2.986	46.8	32.4		0	0	0	0	hasadék járható részig vesztett
+De46B	De46B1	1.013	354.7	30.6		0	0	0	0	kürtõ kezdet jobb fal csavar
+De46B1	De46B2	1.927	324.8	50.6		0	0	0	0	átbújás elõtt bal fal csavar
+De46B2	De46B3	1.248	23.7	24.2		0	0	0	0	átbújás után jobb fal csavar
+De46B3	De46B4	0.611	329.3	13.4		0	0	0	0	jobb fal él csavar
+De46B4	De46B4A	1.949	74.2	-77.8		0	0	0	0	elsõ akna alsó perem vesztett
+De46B4	De46B4B	2.971	312.8	-52.2		0	0	0	0	2. akna jobb alsó él cseppkõnél vesztett
+De46B4	De46B5	3.083	244.5	52.7		0	0	0	0	bal fal lapos után csavar
+De46B5	De46B6	1.511	320.1	67.7		0	0	0	0	mennyezet él csavar
+De46B6	De46B7	1.36	203.4	-26.2		0	0	0	0	cseppkõlefolyás alja vesztett
+De46B7	De46B8	3.861	228.5	46.8		0	0	0	0	elszûkülés vesztett
+De46C	De46D	3.564	148.5	32.7		0	0	0	0	lefolyáshoz lenyúló nyelv vesztett
+De46D	De46D1	5.544	88.5	17		0	0	0	0	balra vége vesztett
+De46D	De46E	2.714	152.4	51.1		0	0	0	0	mennyezet él vesztett
+De46E	De46F	2.502	0.8	54.9		0	0	0	0	felfelé vége vesztett
+
+Survey name: 2011.03.26.
+Survey team: ARIADNE KBE
+Gazda Attila	Fúrás
+Kovács Richárd	Mûszer leolvasása
+	
+	
+	
+Survey date: 40628.5698484722
+Declination: 3.87
+Instruments: 
+DistoX (0.24)	0
+DistoX (0.24)	0
+DistoX (0.24)	0
+Fix point: 
+0	0	0	0	0	0	0
+Survey data
+From	To	Length	Azimuth	Vertical	Label	Left	Right	Up	Down	Note
+Ny9	Nyf1	2.525	310.6	36.8		0	0	0	0	felmászásban kõtömb csavar
+Nyf1	Nyf2	4.283	26.4	45.4		0	0	0	0	felmászás után ferde mennyezet csavar
+Nyf2	Nyf3	3.131	44.5	2.5		0	0	0	0	kõtömb csúcs elágazás csavar
+Nyf3	Nyf4	4.67	318.2	16.6		0	0	0	0	cseppkövek fölött mennyezet él csavar
+Nyf4	Nyf5	4.746	301.6	-19.8		0	0	0	0	kõtömb él elágazás csavar
+Nyf5	Nyf5A	5.867	25.1	44.5		0	0	0	0	felbújás után szembe fal csavar
+Nyf5A	Nyf5B	2.722	298.4	6.1		0	0	0	0	felkanyarodás bal fal csavar
+Nyf5B	Nyf5C	2.125	31.4	27		0	0	0	0	omladék vége vesztett
+Nyf5	Nyf6	2.097	267.3	-14.4		0	0	0	0	átbújás mennyezet él csavar
+Nyf3	Nyf3A	6.041	120	-26		0	0	0	0	ferde fal balra csavar
+Nyf3A	Ny7	1.588	192.5	-11.8		0	0	0	0	kõtömb csavar körbezár
+V9	V10	7.749	238.4	27.8		0	0	0	0	járat kezdet bal fal csavar
+V10	V11	2.282	283.8	3.9		0	0	0	0	belógó nyelv csavar
+V11	V12	1.144	254.6	3		0	0	0	0	lelógó nyelv alja vesztett
+V12	V13	3.442	253.1	21.8		0	0	0	0	teremben jobb fal csavar
+V13	V14	7.203	216.8	21.4		0	0	0	0	cseppköves résznél mennyezet csavar
+V14	V15	4.462	268.3	-1.4		0	0	0	0	vége középen vesztett
+V9A	V9A1	5.984	282.4	11.8		0	0	0	0	bebújás kõtömb csavar
+V9A1	V9A2	2.733	297.7	31.5		0	0	0	0	fülke vége vesztett
+De29-2	VP1	2.724	320.2	-39.9		0	0	0	0	kis kõtömb bebújásban csavar
+VP1	VP2	1.712	10.8	46.8		0	0	0	0	mennyezet elágazás csavar
+VP2	VP3	5.699	52.8	-3.8		0	0	0	0	kõtömb után jobb fal csavar
+VP3	VP4	1.178	30.7	7.6		0	0	0	0	hasadék kezdet elágazás csavar
+VP4	VP5	6.946	354.8	37.2		0	0	0	0	bal fal csavar
+De15A	De15A1	4.366	191.8	-17.3		0	0	0	0	lapos kõtömb csavar
+De15A1	De15A2	3.448	142.3	35.5		0	0	0	0	fülke mennyezet lelógó csavar
+De15A2	De15A3	2.194	240.2	8.6		0	0	0	0	hasadék bal fal vesztett
+De15A3	De15A4	2.198	248.7	33.4		0	0	0	0	vége szemben vesztett
+De15A2	De15A2A	2.976	86.1	-0.8		0	0	0	0	fülke bal vége vesztett
+De25	De25-1	4.395	305.3	6.3		0	0	0	0	kõtömb él jobbra csavar
+De25-1	De25-2	5.261	304.5	-16.7		0	0	0	0	kõtömb fölött mennyezet csavar
+De25-2	De25-3	1.112	317.7	-15.1		0	0	0	0	jobb fal él csavar
+De25-3	De25-3A	6.931	253.7	4.6		0	0	0	0	terem vége középen vesztett
+De25-3	De25-4	2.151	323.9	-5.2		0	0	0	0	bal fal átjáró csavar
+De25-4	De25-5	3.527	20.7	15.6		0	0	0	0	átjáró után kõtömb csavar
+De25-5	Ny6	1.374	38.9	56.3		0	0	0	0	mennyezet él csavar
+
+Survey name: 2011.10.16.
+Survey team: ARIADNE KBE
+Kovács Ádám	Fúrás
+Kovács Richárd	Mûszer leolvasása
+	
+	
+	
+Survey date: 40832.5698484722
+Declination: 3.87
+Instruments: 
+DistoX (0.31)	0
+DistoX (0.31)	0
+DistoX (0.31)	0
+Fix point: 
+0	0	0	0	0	0	0
+Survey data
+From	To	Length	Azimuth	Vertical	Label	Left	Right	Up	Down	Note
+13A	13A1	2.406	1	-11.9		0	0	0	0	gödör fölött balra él csavar
+15	16	5.311	119.5	-41.2		0	0	0	0	Betyár-lyuk alatt jobb él csavar
+16	17	3.011	91.3	-48.7		0	0	0	0	nagy él csavar elágazás
+17	18	4.97	358.6	2.3		0	0	0	0	kerülõ kezdet mennyezet csavar
+18	19	1.78	67	4.7		0	0	0	0	felbújás elõtt jobb fal csavar
+19	20	2.837	333	45.6		0	0	0	0	bal fal él csavar
+20	21	2.455	340.4	38.4		0	0	0	0	mennyezet él elágazás csavar
+21	21A	3.01	224.5	-51.4		0	0	0	0	kötömb kis kerülõnél csavar
+21A	21B	3.264	289.7	-6.3		0	0	0	0	jobb fal él csavar
+
+Survey name: 2012.12.27.
+Survey team: ARIADNE KBE
+Kovács Richárd	Mûszer leolvasása
+Marozs Ágnes	Fúrás
+	
+	
+	
+Survey date: 41270.5698484722
+Declination: 3.98
+Instruments: 
+DistoX (0.27)	0
+DistoX (0.27)	0
+DistoX (0.27)	0
+Fix point: 
+0	0	0	0	0	0	0
+Survey data
+From	To	Length	Azimuth	Vertical	Label	Left	Right	Up	Down	Note
+Pf9	Pf10	1.39	234	30.4		0	0	0	0	bal fal kanyarban csavar
+Pf10	Pf11	0.881	308.4	7		0	0	0	0	bal fal szûkületben csavar
+Pf11	Pf12	1.431	358.8	26.1		0	0	0	0	fülke jobb fal kanyar csavar
+Pf12	Pf13	1.805	273.2	26.7		0	0	0	0	bal fal felkanyarban csavar
+Pf13	Msz1	1.504	8.7	39.5		0	0	0	0	cseppkõ domb oldala csavar
+Msz1	Msz2	1.714	289.7	12.5		0	0	0	0	mennyezet él balra elágazás csavar
+Msz2	Msz2A	3.766	336	6.5		0	0	0	0	terem vége középen vesztett
+Msz2	Msz3	2.077	224.4	0.4		0	0	0	0	kõtömb középen csavar
+Msz3	Msz4	1.396	207.7	20.6		0	0	0	0	járható vége jobb fal karcolt
+Msz4	Msz5	2.114	189.6	17.3		0	0	0	0	nem járható eddig belátni vesztett
+Pa5	Pa5A	1.675	44.5	-7.1		0	0	0	0	jobb fal borsóköves él vesztett
+Pa5A	Pa5B	1.081	342.8	-19.7		0	0	0	0	kanyar után vesztett
+Pa6	Pa6A	3.31	44	52.7		0	0	0	0	kürtõben szemben felkanyar csavar
+Pa6A	Pa6B	2.399	263.4	51.2		0	0	0	0	felfelé jobb fal vesztett
+Pa6B	Pa6C	1.661	202	41.5		0	0	0	0	kürtõ vége vesztett
+11	11A	3.037	304.8	53.7		0	0	0	0	párkány mennyezet él csavar
+11A	11B	1.727	16.4	26.5		0	0	0	0	felsõ rész kezdete jobb fal csavar
+11B	11C	4.873	298.4	61.8		0	0	0	0	kürtõ vége középen vesztett
+13A1	13A2	2.33	78.4	-80.4		0	0	0	0	gödör alja balra csavar
+13A2	13A3	2.036	102.1	-2.1		0	0	0	0	áttörés túloldala jobb fal csavar
+13A3	21B	1.733	62.5	-4.5		0	0	0	0	bal fal él csavar
+1	1A	2.453	78.9	80.7		0	0	0	0	kürtõben mennyezet nitt
+1A	1B	0.998	339.4	40.7		0	0	0	0	szembe fal csavar
+1B	1C	1.189	83.1	-3.1		0	0	0	0	jobb fal kanyarban csavar
+1C	1D	3.362	3.5	-19.7		0	0	0	0	laposnál bal fal kõél csavar
+1D	1E	1.7	23.9	-0.3		0	0	0	0	vége vesztett
+
+Survey name: 2012.12.28.
+Survey team: ARIADNE KBE
+Kovács Richárd	Mérés
+Tóth Zoltán	Fúrás
+Soproni Péter	Fúrás
+	
+	
+Survey date: 41271.5698484722
+Declination: 3.98
+Instruments: 
+DistoX (0.27)	0
+DistoX (0.27)	0
+DistoX (0.27)	0
+Fix point: 
+0	0	0	0	0	0	0
+Survey data
+From	To	Length	Azimuth	Vertical	Label	Left	Right	Up	Down	Note
+17	17A	8.236	175.8	-5.8		0	0	0	0	Vörös-t hátsó rész kõnyelv elágazás csavar
+17A	17B	8.39	250.8	13		0	0	0	0	terem vége felsõ beugró csavar
+17A	Csly1	3.618	100.5	-15.8		0	0	0	0	jobb fal járat kezdet csavar
+21A	21A1	2.63	166.4	-39.5		0	0	0	0	átjáró lapos részen kõtömb él csavar
+21A1	18	1.255	144.6	14.4		0	0	0	0	mennyezet él csavar
+21	21-1	3.388	330	4.9		0	0	0	0	kis járat jobb fal csavar
+21-1	21-2	1.764	287.6	21.8		0	0	0	0	járat vége vesztett
+21	Ma1	2.918	35.6	9.8		0	0	0	0	járat közepén kõtömb csavar
+Ma1	Ma1k	6.311	196.1	66		0	0	0	0	kürtõ teteje vesztett
+Ma1	Ma1A	1.752	320.9	23.1		0	0	0	0	járat kezdet mennyezet él csavar
+Ma1A	Ma1B	0.821	302.1	-10.7		0	0	0	0	kõtömb él vesztett
+Ma1B	Ma1C	2.555	309.4	16.7		0	0	0	0	fülke vége vesztett
+Ma1	Ma2	6.424	26.7	47.7		0	0	0	0	balra mennyezet dudor csavar
+Ma2	Ma2A	4.246	326.3	14.8		0	0	0	0	cseppköves vég vesztett
+Ma2	Ma3	2.94	55.3	28.9		0	0	0	0	kõtömb jobb oldal cseppkövek alatt csavar
+Ma3	Ma4	2.159	71.5	50.2		0	0	0	0	mennyezet él elágazás csavar
+Ma4	Ma4A	4.488	10.8	30.3		0	0	0	0	kanyar ferde fal csavar
+Ma4A	Ma4B	2.894	112.9	23.4		0	0	0	0	kõél csavar
+Ma4	Ma5	5.097	71	40.9		0	0	0	0	kürtõ elágazás jobb oldal nagy él csavar
+Ma5	Ma6	1.562	341.3	1.9		0	0	0	0	balra kõél elágazás csavar
+Ma6	Ma7	2.812	54.5	48.8		0	0	0	0	balra mennyezet él csavar
+Ma7	Top1	2.274	131.3	15.8		0	0	0	0	Top-kürtõ kezdete csavar
+Ma7	Ma7A	1.732	306.3	-39.1		0	0	0	0	cseppkõlefolyásban csavar
+Ma7A	Ma7B	1.235	284.6	-9.3		0	0	0	0	aknácska felsõ perem csavar
+Ma7B	Ma7B1	2.076	256.9	-75.8		0	0	0	0	akna alja vesztett
+Ma7B	Ma7C	3.238	11.8	42.3		0	0	0	0	felfelé vége vesztett
+Ma7	Ma8	2.532	49.3	11.3		0	0	0	0	ferde fal szûkülés elõtt csavar
+Ma8	Ma9	3.312	66.4	40.2		0	0	0	0	kanyarban mennyezet csavar
+Ma9	Ma10	2.434	115.7	5.2		0	0	0	0	mennyezet él csavar
+Ma10	Ma10A	3.297	7.5	34.3		0	0	0	0	vissza fel vége vesztett
+Ma10	Ma11	3.261	144.1	-27		0	0	0	0	állócseppkõ elágazás csavar
+Ma11	Ma12	3.291	177.4	-21.5		0	0	0	0	bal fal szûkület fölött csavar
+Ma12	Ma13	2.359	274.8	-62.5		0	0	0	0	szûkületben jobb kõtömb él csavar
+Ma13	Ma14	1.828	213.6	-53		0	0	0	0	jobbra kõtömb csavar
+Ma14	Ma15	1.811	169.8	-34.9		0	0	0	0	letörés után bal fal él csavar
+Ma15	Ma16	4.694	235.4	-37.7		0	0	0	0	jobb fal él elágazás csavar
+
+Survey name: 2008.01.20.
+Survey team: ARIADNE KBE
+Kovács Richárd	Mérés
+Kovács Jenõ	Fúrás
+	
+	
+	
+Survey date: 39467.5698484722
+Declination: 3.45
+Instruments: 
+Mérõszalag	0
+Függõkompasz	0
+Fokív 0.5 fok beosztású	0
+Fix point: 
+0	0	0	0	0	0	0
+Survey data
+From	To	Length	Azimuth	Vertical	Label	Left	Right	Up	Down	Note
+Top1	Top2	4.625	254.5	74		0	0	0	0	fehér cseppkõlefolyás összeszûkülésnél bal fal csa
+Top2	Top3	4.3	314	71		0	0	0	0	kõcsúcs elágazás alatt csavar
+Top3	Top4	4.185	175	72		0	0	0	0	összeszûkülés elõtt csavar alatta két régi szög
+Top4	Top5	3.43	349.5	63.5		0	0	0	0	szûkület után fal él csavar
+Top5	Top6	1.8	0	90		0	0	0	0	teteje vesztett
+Top5	Top5A	2.4	196	2		0	0	0	0	oldal hasadék vége vesztett
+Top5	Top5-1	1.3	16	-3		0	0	0	0	hasadék másik fele vesztett még 2m járhatatlan
+Top3	Top3A	1.66	256	57.5		0	0	0	0	oldal elágazás cseppköves él csavar
+Top3A	Top3B	2.2	150	38		0	0	0	0	felfelé vég vesztett
+Top3A	Top3A1	1.57	226	-4		0	0	0	0	oldalfülke vesztett lefelé lyuk
+Ma5	Ts2	3.08	237	59.5		0	0	0	0	kanyar szemben csavar
+Ts2	Ts3	3.13	112.2	45		0	0	0	0	kanyar szemben földközelben csavar
+Ts3	Ts4	3.86	308	65.5		0	0	0	0	párkány bal oldalon csavar
+Ts4	Ts5	2.755	168	67.75		0	0	0	0	lapos rész csavar
+Ts5	Ts6	2.95	8	72		0	0	0	0	párkány fölött szûkület alatt csavar
+Ts6	Ts7	2.995	237	78		0	0	0	0	hasadék mennyezet cseppkõzászló mellett
+Ts7	Ts8	1.69	299.5	61.5		0	0	0	0	tetarátás oldal elõtt cseppköves él csavar
+Ts8	Ts8A	0.945	228.5	40.25		0	0	0	0	elágazásmennyezet kõcsücsök csavar
+Ts8A	Ts8A1	1.1	203	-5		0	0	0	0	tetarátás oldalhasadék vesztett
+Ts8A	Ts8B	2.055	330	43		0	0	0	0	felfelé jobb oldal kõcsücsök csavar
+Ts8B	Ts8C	1.7	304	43		0	0	0	0	járható vég kanyar vesztett
+Ts8	Ts9	2.11	349	57		0	0	0	0	kõcsücsök szûkülés alatt csavar
+Ts9	Ts10	2.73	196	71		0	0	0	0	szûkülés fölött tetarátás oldalfülke elõtt mennyez
+Ts10	Ts11	1.1	326	27		0	0	0	0	szûkület után járat alja cseppkõlefolyás csavar
+Ts11	Ts12	1.41	54	78		0	0	0	0	bebújó mennyezet csavar
+Ts12	Ts13	0.79	93.8	48		0	0	0	0	járatkezdet szemben csavar
+Ts13	Ar12	1.34	50	16.5		0	0	0	0	Ariadne pont
+
+Survey name: 2013.01.06.
+Survey team: ARIADNE KBE
+Darics Dóra	Fúrás
+Kovács Richárd	Mérés
+	
+	
+	
+Survey date: 41280.5698484722
+Declination: 3.98
+Instruments: 
+DistoX (0.24)	0
+DistoX (0.24)	0
+DistoX (0.24)	0
+Fix point: 
+0	0	0	0	0	0	0
+Survey data
+From	To	Length	Azimuth	Vertical	Label	Left	Right	Up	Down	Note
+Csly1	Csly2	2.193	35.6	-43.6		0	0	0	0	szûkület alatt bal fal elágazás
+Csly2	Csly2A	2.105	295.4	-82.5		0	0	0	0	kõtömb lent csavar
+Csly2A	Csly2B	1.532	306	-31.3		0	0	0	0	szûk kis járat vesztett
+Csly2	Csly3	0.938	88	-10.8		0	0	0	0	jobb fal él elágazás csavar
+Csly3	Csly3A	2.978	133.9	-28.4		0	0	0	0	szemben járat vége vesztett
+Csly3	Csly4	1.061	8.3	37.3		0	0	0	0	bal fal kürtõ elágazás csavar
+Csly4	Csly4A	3.811	281.3	70.8		0	0	0	0	kürtõ vége vesztett
+Csly4	Csly5	1.49	123	62.6		0	0	0	0	kürtõben szembe fal csavar
+Csly5	Csly6	2.429	339.3	73.2		0	0	0	0	jobb fal él csavar
+Csly6	Csly7	1.922	2.6	44.5		0	0	0	0	felkanyar cavar
+Csly7	Csly8	1.43	127.7	56.5		0	0	0	0	szûkület után jobb fal vesztett
+Csly8	Csly9	1.508	29.7	52.2		0	0	0	0	jobb fal él vesztett
+Csly9	Csly10	3.012	335.3	56.7		0	0	0	0	vége vesztett
+Ma11	Ma11A	2.02	105.6	18.9		0	0	0	0	szûkület alja kõtömb csavar
+Ma11A	Ma11B	1.403	72.4	62.8		0	0	0	0	mennyezet él csavar
+Ma11B	Ma11C	2.115	72.6	0.8		0	0	0	0	belógó kõnyelv csavar
+21	22	2.785	98.8	-22.6		0	0	0	0	ferde kõtömb csavar
+22	23	1.851	147.5	-31.8		0	0	0	0	bontott átjáró mennyezet csavar
+23	24	1.008	84	-26.3		0	0	0	0	bal fal él csavar
+24	24A	2.869	83.1	-44.3		0	0	0	0	járat lefelé vesztett
+24	25	2.215	124.9	-4.8		0	0	0	0	kõtömb elágazás csavar
+25	25A	2.348	180.5	-6.5		0	0	0	0	nagy él mennyezet elágazás csavar
+25A	25A-1	2.051	88.4	8.9		0	0	0	0	bal fal él csavar
+25A-1	25A-2	2.538	133.1	-34.1		0	0	0	0	szûkületben kanyar csavar
+25A	25B	2.867	201.6	-32.8		0	0	0	0	cseppköves él csavar
+25B	25C	0.96	52.8	-17.6		0	0	0	0	kõtömb él csavar
+25C	25D	0.898	76.5	-34.5		0	0	0	0	szûkület bejárat balra csavar
+25D	25E	2.474	96.4	-7.3		0	0	0	0	bal oldal nagy kõtömb csavar
+25E	25F	1.612	152.3	-12.4		0	0	0	0	teremben kõtömb csúcs csavar
+25F	25G	2.923	186.8	-24.7		0	0	0	0	terem vége vesztett
+25F	25F1	1.814	312	60.4		0	0	0	0	bal fal él csavar
+25F1	25A2	1.319	21.3	14		0	0	0	0	jobb fal csavar körbezár
+25C	Nk1	3.339	119.3	78.6		0	0	0	0	kürtõ fal csavar
+Nk1	Nk2	1.268	350	35.6		0	0	0	0	bal fal él párkánynál csavar
+Nk2	Nk3	2.621	355	44		0	0	0	0	kibújás után bal fal csavar
+Nk3	Nk4	1.125	100	3.6		0	0	0	0	szemben kürtõ fal csavar
+Nk4	25A-1	3.88	127	-74.5		0	0	0	0	körbezár
+Nk4	Nk5	2.303	4.4	44.1		0	0	0	0	átbújásnál jobb fal csavar
+Nk5	Nk6	3.382	348.3	52.2		0	0	0	0	bal fal cseppköves él csavar
+22	26	4.343	94.1	1.6		0	0	0	0	letörésnél bal fal él csavar
+25	26	2.872	19.7	37.2		0	0	0	0	kõtömb csavar körbezár
+26	27	2.104	112.1	-3.3		0	0	0	0	bal fal él csavar
+27	28	2.394	88.6	30.8		0	0	0	0	nagy kõtömb csavar
+28	29	1.698	20.5	37.5		0	0	0	0	bal oldal kiálló csúcs csavar
+29	29A	2.658	333.5	37.4		0	0	0	0	fehér lefolyás fölött vesztett
+29	30	2.338	66.4	28.9		0	0	0	0	bal cseppköves fal csavar
+30	31x	0.824	123.9	31.2		0	0	0	0	jobb fal régi csavar
+31x	32x	1.72	98.9	-31.2		0	0	0	0	gödör fal teteje csavar
+32x	33	2.406	95.3	55.1		0	0	0	0	jobb fal elágazás csavar
+Ma16	Ma17	1.769	159.9	-29		0	0	0	0	kõtömb él csavar
+Ma17	33	3.169	167.7	-34.9		0	0	0	0	jobb fal elágazás csavar
+31x	31	1.177	39.7	5.5		0	0	0	0	ferde fal csavar
+31	31A	4.934	356.1	49.3		0	0	0	0	mennyezet bütyök csavar
+Ma16	31A	1.292	289.6	5.8		0	0	0	0	körbezár
+
+Survey name: 2014.07.02.
+Survey team: ARIADNE KBE
+Kovács Richárd	Mérés
+Varga Eszter	Fúrás
+	
+	
+	
+Survey date: 41822.5698484722
+Declination: 4.1
+Instruments: 
+DistoX (0.28)	0
+DistoX (0.28)	0
+DistoX (0.28)	0
+Fix point: 
+0	0	0	0	0	0	0
+Survey data
+From	To	Length	Azimuth	Vertical	Label	Left	Right	Up	Down	Note
+Nk6	Nk7	10.583	330.6	74.3		0	0	0	0	kürtõ kiszállás jobb fal csavar
+Nk7	Nk8	4.621	239.8	35		0	0	0	0	bal fal kis hasadékkal szemben csavar
+Nk8	Nk8A	0.961	14.1	-26.2		0	0	0	0	kis hasadék jobb él karcolt
+Nk8A	Nk8B	2.023	359.7	-24.3		0	0	0	0	hasadék alsó része vesztett
+Nk8	Nk9	4.184	288.7	58		0	0	0	0	felmászás után jobb fal csavar
+Nk9	Nk10	0.971	250.8	34.2		0	0	0	0	kanyar bal fal csavar
+Nk10	Nk11	1.237	356	25.5		0	0	0	0	jobb fal kiálló csavar
+Nk11	Nk12	2.011	321.2	40.9		0	0	0	0	bal fal él csavar
+Nk12	Nk13	2.263	40.4	-9.9		0	0	0	0	ablakon át szembe fal vesztett
+31	32	2.21	160.4	-19.3		0	0	0	0	lemenet kezdet mennyezet csavar
+32	32A	2.793	173.1	-59.4		0	0	0	0	lent bal fal kõél csavar
+32A	28	4.655	280.3	4.9		0	0	0	0	nagy kõtömb teteje körbezár csavar
+32A	Bel1	3.037	121.6	-13.4		0	0	0	0	terem eleje kõtömb elágazás csavar
+Bel1	Bel1-1	2.872	58.7	31		0	0	0	0	cseppkõfal letörése csavar
+Bel1-1	Bel1A	4.629	346.6	54		0	0	0	0	fal tetejénél mennyezet csavar
+Bel1A	33	2.768	266	-8.8		0	0	0	0	bal fal körbezár csavar
+Bel1-1	Bel1-2	1.964	112.8	23.9		0	0	0	0	falon átbújás jobb fal csavar
+Bel1-2	Bel1-3	4.275	93.1	25.8		0	0	0	0	jobb fal szûkülés elõtt csavar
+Bel1-3	Bel1-4	1.06	36.7	9.8		0	0	0	0	bal cseppköves fal csavar
+Bel1	Bel2	1.689	164.8	-3.1		0	0	0	0	belógó mennyezet él csavar
+Bel2	Ch	5.532	155.2	-27.4		0	0	0	0	ch bejárat bal fal él csavar
+Bel2	Bel2A	2.532	195.2	-46.2		0	0	0	0	bebújéás mennyezet él csavar
+Bel2A	Bel2B	2.456	218.5	-25.7		0	0	0	0	fülkében bal fal csavar
+Bel2B	Bel2C	1.38	304.7	4.9		0	0	0	0	jobb fal él csavar
+Bel2C	Bel2D	2.089	266.9	-28		0	0	0	0	szûk lyuk vesztett
+Bel1	Bek1	1.881	243.8	6.5		0	0	0	0	bebújás után bal fal él csavar
+Bek1	Bek2	2.773	264.9	-31.7		0	0	0	0	átbújó jobb oldal cseppkõ csavar
+Bek2	Bek3	1.217	241.7	8.4		0	0	0	0	jobbra mennyezet kiálló csavar
+Bek3	Bek3A	2.298	316.6	-11.3		0	0	0	0	oldalfülke vége vesztett
+Bek3	Bek4	2.201	171.1	-54.7		0	0	0	0	szûkület aljzat kõ csavar
+Bek4	Bek5	1.997	224.8	-35.9		0	0	0	0	jobb fal csavar
+Bek5	Bek6	0.5	213.8	-36.5		0	0	0	0	bal fal kanyar csavar
+Bek6	Bek7	1.322	316.7	-27.8		0	0	0	0	jobb fal kanyar csavar
+Bek7	25F	1.406	225	-4.6		0	0	0	0	kõtömb csúcs teremben körbezár csavar
+Bel1A	Belk1	2.882	90.7	37.7		0	0	0	0	felmászás után bal oldal csavar
+Belk1	Belk2	3.089	163.7	30.4		0	0	0	0	kürtõ alatt jobb cseppköves él csavar
+Ma11C	Ma11D	3.571	114.3	1.3		0	0	0	0	elõre vége vesztett
+Ma11C	Ma11C1	2.448	29.7	37.6		0	0	0	0	vége elõtt mennyezet kiálló csavar
+Ma11C1	Ma11C2	1.54	34.7	46		0	0	0	0	elszûkülésben vesztett
+
+Survey name: 2008.03.05.
+Survey team: ARIADNE KBE
+Kovács Jenõ	Fúrás
+Kovács Richárd	Mérés
+	
+	
+	
+Survey date: 39512.5698484722
+Declination: 3.45
+Instruments: 
+Mérõszalag	0
+Függõkompasz	0
+Fokív 0.5 fok beosztású	0
+Fix point: 
+0	0	0	0	0	0	0
+Survey data
+From	To	Length	Azimuth	Vertical	Label	Left	Right	Up	Down	Note
+Belk2	Belk2A	0.865	215.5	-49		0	0	0	0	cseppköves él csavar
+Belk2A	Belk2B	2.3	172	20		0	0	0	0	jobb oldali ág vége vesztett
+Belk2A	Belk2A1	1.9	140	0		0	0	0	0	bal oldali fülke vesztett
+Belk2	Belk3	4.53	290	56.5		0	0	0	0	jobb oldal kiálló bütyök csavar
+Belk3	Belk4	3.06	239.5	60.5		0	0	0	0	bal oldali lyuk bal fala állócseppkõ alatt csavar
+Belk4	Belk5	3.385	325.5	67.5		0	0	0	0	mennyezet jobb oldalon csavar
+Belk5	Belk6	1.3	290	-2		0	0	0	0	szûkülés után balra szembe fal vesztett
+
+Survey name: 2014.11.29.
+Survey team: ARIADNE KBE
+Kovács Richárd	Mérés
+Krekk Ivett	Fúrás
+	
+	
+	
+Survey date: 41972.5698484722
+Declination: 4.1
+Instruments: 
+DistoX (0.24)	0
+DistoX (0.24)	0
+DistoX (0.24)	0
+Fix point: 
+0	0	0	0	0	0	0
+Survey data
+From	To	Length	Azimuth	Vertical	Label	Left	Right	Up	Down	Note
+Ch	Ch1	2.66	226.6	-32		0	0	0	0	fülke jobb fal szemben él csavar
+Ch1	Ch2	3.3	101.9	-28.4		0	0	0	0	lent kanyar mennyezet belógó él csavar
+Ch2	Ch2A	1.5	93.5	13.2		0	0	0	0	bontott kiágazás vége vesztett
+Ch2	Ch3	2.93	211.7	-24.3		0	0	0	0	terem kezdetaljzat bástya jobbra csavar
+Ch3	Ch4	3	139	-11.8		0	0	0	0	elõre cseppköveknél balra kõ csavar
+Ch4	Ch5	2.68	202.4	-9.7		0	0	0	0	bal fal él kürtõ elõtt
+Ch5	Ch5A	7.25	269.5	70.7		0	0	0	0	kürtõ teteje vesztett
+Ch5	Ch6	1.09	250.2	-27.9		0	0	0	0	letörésnél mennyezet él régi csavar
+Ch6	Ch7	3.08	219	-38.7		0	0	0	0	lent folyosó fehér kõtömb csavar
+Ch7	Ch7A	7.17	274.4	12.1		0	0	0	0	terem vége középen szemben vesztett
+Ch7	Ch8	2.29	80.2	-6.3		0	0	0	0	balra nagy kiálló bástya él csavar
+Ch8	Ch8A	7.26	267	78		0	0	0	0	átjáró kürtõ vesztett
+Ch8	Ch9	2.72	166.7	-50.4		0	0	0	0	bontott lemenetnél jobb kõtömb elág csavar
+Ch9	Ch9-1	2.43	98.4	-28.7		0	0	0	0	lefolyás aljában kiálló csavar
+Ch9-1	Ch9-1A	5.35	39.4	35.5		0	0	0	0	lefolyáson túl elszûkülés vége vesztett
+Ch9-1	Ch9-2	0.9	121.9	-17.7		0	0	0	0	Féregút eleje mennyezet él csavar
+Ch9-2	Ch9-3	3.1	158	-30.1		0	0	0	0	kiágazásnál mennyezet él csavar
+Ch9-3	Ch9-3A	0.86	196.2	-11.2		0	0	0	0	fülke alja jobbra kürtõ kezdet csavar
+Ch9-3A	Ch9-3AA	1.48	98.4	2.1		0	0	0	0	denevéres szûk járat vesztett
+Ch9-3A	Ch9-3B	2.37	19.7	67.6		0	0	0	0	ferde falon kis állócseppk teteje vesztett
+Ch9-3B	Ch9-3C	1.97	313.9	77.2		0	0	0	0	nagy állócseppkõ teteje vesztett
+Ch9-3C	Ch9-3D	2.4	319.5	54		0	0	0	0	kürtõ elszûkülõ teteje vesztett
+Ch9-3	Ch9-4	1.16	247.5	-32.1		0	0	0	0	kanyar kiálló tömb csavar
+Ch9-4	Ch9-5	1.92	311.2	-22.7		0	0	0	0	ferde jobb fal csavar
+Ch9-5	Ch9-6	2.41	251.6	-17.4		0	0	0	0	kibújás terembe bal fal él csavar
+Ch9-6	Ch9-7	1.45	287	3.8		0	0	0	0	mennyezet él csavar
+Ch9	Ch10	1.49	183.6	-55.3		0	0	0	0	akna felsõ rész szemben kiálló csavar
+Ch10	Ch11	1.71	313.2	-60.9		0	0	0	0	jobb lekanyar cseppköves kiálló csavar
+Ch11	Ch12	3.55	209.4	-38.9		0	0	0	0	lent mennyezet él csavar
+Ch12	Ch13	1.52	264.98	-42.2		0	0	0	0	ferde kõtömb oldala csavar
+Ch13	Ch13A	1.49	293.5	21.5		0	0	0	0	jobb ferde fal csavar
+Ch13A	Ch13B	2.96	257.4	-16.2		0	0	0	0	jobb fal vége elõtt csavar
+Ch13B	Ch13C	1.33	242.5	-11.6		0	0	0	0	vége vesztett
+Ch13	Ch14	4.83	179.6	-34.1		0	0	0	0	alja kanyar jobb fal csavar
+Ch14	Ch15	1.4	109.9	-16.9		0	0	0	0	balra kõtömb lekanyarnál csavar
+Ch15	Ch16	1.69	215.2	0.4		0	0	0	0	kürtõ kezdet cseppköves kiálló csavar
+Ch16	Ch17	4	171.2	-62.3		0	0	0	0	letörés vége bal fal kiálló csavar
+Ch17	Ch18	4.98	182.9	-33.8		0	0	0	0	Alek kezdete jobb fal kiálló csavar
+Ch18	Ch19	1.83	124.2	-0.4		0	0	0	0	bal fal él kanyar csavar
+Ch19	Ch20	1.86	188.3	18.2		0	0	0	0	jobb fal felkanyarban csavar
+Ch20	Ch21	2.34	109.3	61.8		0	0	0	0	Keltetõ bal fal él régi lyukban csavar
+Ch21	Ch21A	1.68	235	13.1		0	0	0	0	kürtõ elõtt szemben fal él csavar
+Ch21A	Ch21B	1.98	184.6	-46.1		0	0	0	0	kis aknában csavar
+Ch21B	Ch21C	1.63	25.6	-74.4		0	0	0	0	iszapos alja vesztett
+Ch21	Ch22	2.29	75	-14		0	0	0	0	kõtömb balra kanyarban csavar
+Ch22	Ch22A	3.3	47.5	14.1		0	0	0	0	fülke alsó vége szemben vesztett
+Ch22	Ch23	2.64	151.6	8.9		0	0	0	0	kibújás jobb fal csavar
+Ch23	Ch24	2	8.9	41.1		0	0	0	0	felmászás kezdete elágazás csavar
+Ch23	ChT1	4.36	168.2	-14		0	0	0	0	jobb fal kiálló él régi csavar
+ChT1	ChT2	3.68	173.4	-20.3		0	0	0	0	oltár alatt balra kõél csavar
+ChT2	ChT3	2.64	194.9	-24.4		0	0	0	0	bal nagy él elágazás régi csavar
+ChT3	ChT3A	3.5	194.7	-29.4		0	0	0	0	bal fal kiálló oldalbontásnál csavar
+ChT3A	ChT3A1	1.87	116.4	-40.3		0	0	0	0	jobb törmelékfal csavar
+ChT3A1	ChT3A2	1.92	85.4	0		0	0	0	0	elõre vége vesztett
+ChT3A	ChT3B	3.56	231.8	-1.8		0	0	0	0	szûkület elõtt jobb él csavar
+ChT3B	ChT3C	1.33	172.6	27.2		0	0	0	0	bent középen belógó karcolt
+ChT3C	ChT3C1	1.69	287.8	15.5		0	0	0	0	felfelé kis átvezetõ luk vesztett
+ChT3C	ChT3D	2.04	104.5	-35.2		0	0	0	0	lefelé alja vége középen vesztett
+ChT3	ChT4	3.72	284.5	7.4		0	0	0	0	jobb fal él régi csavar
+ChT4	ChT5	3.92	226.6	15.4		0	0	0	0	bal fal elágazás csavar
+ChT5	ChT5A	0.67	212.3	9.7		0	0	0	0	Hómanók bebújó mennyezet perem csavar
+ChT5A	ChT5B	3.06	183.1	-11.2		0	0	0	0	terem közepe aljzat kürtõ alatt vesztett
+ChT5B	ChT5K	4.59	342.7	83.5		0	0	0	0	kürtõ teteje vesztett
+ChT5B	ChT5C	2.5	170.8	-21.1		0	0	0	0	terem jobb alja vége vesztett
+ChT5	ChT6	1.81	291.9	36.3		0	0	0	0	belógó csúcs régi csavar
+ChT6	ChT6A	1.48	242.8	-46.9		0	0	0	0	kis bontott lyuk bal fala csavar
+ChT6A	ChT6B	0.66	283.1	-13.1		0	0	0	0	vége vesztett
+
+Survey name: 2014.11.30.
+Survey team: ARIADNE KBE
+Kovács Richárd	Mérés
+Varga Eszter	Fúrás
+	
+	
+	
+Survey date: 41973.5698484722
+Declination: 4.1
+Instruments: 
+DistoX (0.24)	0
+DistoX (0.24)	0
+DistoX (0.24)	0
+Fix point: 
+0	0	0	0	0	0	0
+Survey data
+From	To	Length	Azimuth	Vertical	Label	Left	Right	Up	Down	Note
+Ch16	Ch16A	1.36	240.1	65.8		0	0	0	0	üst alatt cseppköves él elágazás csavar
+Ch16A	Ch16A1	4.83	268	72.8		0	0	0	0	középsõ kürtõ teteje vesztett
+Ch16A	Ch16B	1.96	187.5	63.2		0	0	0	0	szemben él csavar
+Ch16B	Ch16B1	1.55	225.1	5.6		0	0	0	0	kis járat vége vesztett
+Ch16B	Ch16C	1.22	66	23.1		0	0	0	0	cseppköves fal szemben csavar
+Ch16C	Ch16D	2.71	226	42.8		0	0	0	0	fülke jobb mennyezet csavar
+Ch16D	Ch16E	0.69	100.8	-7		0	0	0	0	függõcseppkõ alja vesztett
+Ch16E	Ch16F	2.07	104.2	9.1		0	0	0	0	vége vesztett
+Ch16C	Ch16C1	1.73	352.8	-7.5		0	0	0	0	másik kürtõ cseppköves oldala csavar
+Ch16C1	Ch16C11	2	42.5	46.3		0	0	0	0	jobbra kürtõ vége vesztett
+Ch16C1	Ch16A	2.5	210	-53.9		0	0	0	0	körbezár
+ChT1	ChT1A	2.46	37.8	-5.8		0	0	0	0	nagy kiálló kõcsücsök csavar
+ChT1A	ChT1B	2.89	99.9	6.2		0	0	0	0	jobb fal él átbújásnál csavar
+ChT1B	ChT1C	2.14	36.6	-30.2		0	0	0	0	fülke vége alja két luk között vesztett
+Ch23	Ch23A	4.02	92.9	-10.1		0	0	0	0	kis fülke vége vesztett
+Ch23	Ch23-1	2	239.3	71.6		0	0	0	0	ferde bal mennyezet csavar
+Ch23-1	Ch23-2	0.86	256.2	23.6		0	0	0	0	átbújó bal él csavar
+Ch24	Ch25	4.75	295.3	60.7		0	0	0	0	jobb fal él kis akna felett csavar
+Ch25	Ch26	3.02	257.4	48.4		0	0	0	0	ferde fal teteje csavar
+Ch26	Ch27	1.99	173.3	82.1		0	0	0	0	mennyezet kis lemenõ csõnél csavar
+Ch27	Ch28	1.51	217.9	-25.2		0	0	0	0	H-kürtõ alja elágazás régi csavar
+Ch28	Ch28A	0.99	279.9	-5.6		0	0	0	0	bal fal akna felett csavar
+Ch28A	Ch28B	1.69	345.8	31.1		0	0	0	0	kõtömb él balra bebújás kezdet csavar
+Ch28B	Ch28B1	1.99	258.3	68.3		0	0	0	0	omladék nagy lemez tömb csavar
+Ch28B	Ch28C	1.1	56.3	19.7		0	0	0	0	átbújás után jobb fal csavar
+Ch28C	Ch28D	2.45	20.8	24.8		0	0	0	0	ferde bal fal kõtömb csavar
+Ch28D	Ch28D1	6.42	254.6	57.2		0	0	0	0	omladék járat vége vesztett
+Ch28D	Ch28D2	3.6	6.4	68.8		0	0	0	0	jobb oldal hasadék teteje vesztett
+Ch28D	Ch28E	3.11	65.6	-29.3		0	0	0	0	szûkülés kezdet jobb fal él csavar
+Ch28E	Ch28F	2.58	32.3	40.1		0	0	0	0	vége vesztett
+Ch28	Ch28AA	3.24	296.8	67.5		0	0	0	0	ferde hasadék középen kõtömb vesztett
+Ch28	Ch29	4.6	106.1	85.8		0	0	0	0	felmászás teteje csavar
+Ch29	Ch30	2.47	244	17.6		0	0	0	0	átjáró után szembe fal csavar
+Ch30	Ch30A	2.8	132.1	-63.1		0	0	0	0	lefelé törmelék alá vesztett
+Ch30	Ch31	3.38	335.9	69.9		0	0	0	0	felmászás teteje cseppköves fal ferde régi csavar
+Ch31	Ch32	2.31	29.6	58.1		0	0	0	0	jobb fal régi csavar
+Ch32	Ch32A	2.5	218.9	82.2		0	0	0	0	felfelé vesztett
+Ch32	Ch33	1.96	20.7	-31		0	0	0	0	kikanyarodás jobb fal él csavar
+Ch33	Ch34	3.4	306.5	35		0	0	0	0	szembe fal csavar
+Ch34	Ch34A	3.67	198.6	-41.1		0	0	0	0	lapos bebújás jobb fal él csavar
+Ch34A	Ch34B	0.68	193.4	30.1		0	0	0	0	bal cseppköves fal csavar
+Ch34B	Ch34C	3.15	189.4	54.8		0	0	0	0	fent ferde jobb fal csavar
+Ch34C	Ch34D	1.2	165.8	18.2		0	0	0	0	vége vesztett
+Ch34	Ch35	1.74	60.4	39.8		0	0	0	0	jobb fal felmászás után fehér lefolyás csavar
+Ch35	Ch35A	7.43	186.9	45.7		0	0	0	0	hasadék vége szemben csavar
+Ch35	Ch36	1.95	336.9	-20.5		0	0	0	0	kürtõ alja középen csavar
+Ch36	Ch36A	5.19	336.3	42.1		0	0	0	0	ferde fal teteje kis luk fölött csavar
+Ch36A	Ch36B	0.96	31	-77.9		0	0	0	0	csõ jobb oldal perem kiálló vesztett
+Ch36B	Ch36C	2.27	264.5	-63.5		0	0	0	0	csõ alja törmelék vesztett
+Ch36	Ch36-1	2.76	69.5	-29.8		0	0	0	0	lebújás mennyezet régi csavar
+Ch36-1	Ch36-2	1.22	62.6	-39.3		0	0	0	0	jobb cseppköves él csavar
+Ch36-2	Ch36-2A	1.52	62.2	-51.7		0	0	0	0	jobbra kis lemenõ vesztett
+Ch36-2	Ch36-3	2.08	308.6	5.1		0	0	0	0	ferde fal felmenetnél csavar
+Ch36-3	Ch36-3A	8.04	323.1	60.5		0	0	0	0	ferde kürtõ teteje vesztett
+Ch36-3	Ch36-4	2.51	32.4	-0.6		0	0	0	0	bal ferde fal kiálló régi csavar
+Ch36-4	Ch36-5	4.3	76.3	-39.8		0	0	0	0	bal ferde fal felmenetnél csavar
+Ch36-5	Ch36-5A	0.85	100.5	-40.3		0	0	0	0	szûkület közepén kis cseppkõ teteje csavar
+Ch36-4	Ch36-4A	4	343.6	57.8		0	0	0	0	kis kürtõ elszûkülés vesztett
+Ch36-5	Ch36-6	3.94	301.8	60.6		0	0	0	0	kibújás jobb fal csavar
+Ch36-4	Ch36-6	2.48	41.1	16.3		0	0	0	0	jobb fal lemenetnél csavar körbezár
+Ch27	Ch27A	1.27	159.7	-28.8		0	0	0	0	kis csõben letörésnél csavar
+Ch27A	Ch27B	2.5	174.1	-75.4		0	0	0	0	átbújó jobb felsõ pereme vesztett
+Ch27B	Ch27C	2.06	122.3	-70.3		0	0	0	0	szûkület elõtt bal fal vesztett
+Ch27C	Ch27D	1.46	145.3	-53		0	0	0	0	jobb fal vesztett
+Ch27D	Ch23-2	1.55	68.1	-50.9		0	0	0	0	kibújás jobb fal él körbezár csavar
+
+Survey name: 2014.12.10.
+Survey team: ARIADNE KBE
+Kiss Klaudia	Fúrás
+Kovács Richárd	Mérés
+	
+	
+	
+Survey date: 41983.5698484722
+Declination: 4.1
+Instruments: 
+DistoX (0.28)	0
+DistoX (0.28)	0
+DistoX (0.28)	0
+Fix point: 
+0	0	0	0	0	0	0
+Survey data
+From	To	Length	Azimuth	Vertical	Label	Left	Right	Up	Down	Note
+Ch24	ChN1	1.03	89.2	16.4		0	0	0	0	bebújás jobb fal csavar
+ChN1	ChN2	1.09	29.4	24.3		0	0	0	0	túloldalt jobb fal régi csavar
+ChN2	ChN3	4.39	9.6	30.6		0	0	0	0	bal fal kanyarban régi csavar
+ChN3	ChN4	5.58	103.1	19.5		0	0	0	0	szembe fal elágazás csavar
+ChN4	ChN4A	1.21	49.9	39.4		0	0	0	0	bal fal kiálló csavar
+ChN4A	ChN4B	2.29	144.2	62.2		0	0	0	0	teteje vesztett huzat lefelé
+ChN4	ChN5	3.17	228.3	1.8		0	0	0	0	kürtõ alja szembe fal csavar
+ChN5	ChN6	1.36	67.2	75.3		0	0	0	0	kürtõ fal él csavar
+ChN6	ChN7	1.16	158.3	60.3		0	0	0	0	fent jobb fal él csavar
+ChN7	ChN8	2.33	84.5	27.8		0	0	0	0	letörés felett bal fal csavar
+ChN8	ChN9	2.12	120.3	16.4		0	0	0	0	bal fal él csavar
+ChN9	ChN10	2.09	182.3	-19.2		0	0	0	0	járat közepén nagy kõtömb régi csavar
+ChN10	ChN10A	0.76	129.1	57.5		0	0	0	0	bal párkányon kis cseppkõ teteje
+ChN10A	ChN10B	3.47	306.5	53.5		0	0	0	0	cseppköves ferde kürtõ vége vesztett
+ChN10A	ChN10A1	1.62	74.9	39.7		0	0	0	0	balra szûk járat jobb fal él vesztett
+ChN10	ChN11	0.86	179.1	-0.3		0	0	0	0	bal fal él régi csavar
+ChN11	ChN11A	1.28	226.4	22		0	0	0	0	ferde fal balra kiálló csavar
+ChN11A	ChN11B	7.05	249.7	56.5		0	0	0	0	fal teteje amíg ellátni vesztett
+ChN11	ChN12	1.28	191.4	-29.2		0	0	0	0	jobb cseppkõél régi csavar
+ChN12	ChN13	2.32	195.3	-9.7		0	0	0	0	kanyarban elágazás jobb fal csavar
+ChN13	ChN14	0.82	145.5	-17.2		0	0	0	0	jobb fal kiálló csavar
+ChN14	ChN15	2.62	100	44.5		0	0	0	0	jobb fal él csavar
+ChN15	ChN16	2.85	97.8	4.1		0	0	0	0	kanyarban bal oldal kiálló nyelv csavar
+ChN16	ChN17	1.94	187	4		0	0	0	0	bal fal kürtõnél csavar
+ChN17	ChN17A	3.64	317.9	62.7		0	0	0	0	ferde kürtõ teteje vesztett
+ChN17	ChN18	1.7	248.9	-13.2		0	0	0	0	jobb fal él bontás kezdete csavar
+ChN18	ChN19	3.31	194	10.3		0	0	0	0	bal fal él csavar
+ChN19	ChN20	1.56	203.7	25.5		0	0	0	0	vége vesztett
+ChN13	Tff1	3.01	323.9	57.2		0	0	0	0	drapériával szemben ferde mennyezet csavar
+Tff1	Tff2	2.76	222	18.4		0	0	0	0	lemenõ csõ fölött él csavar
+Tff2	Tff3	1.72	280.9	51.6		0	0	0	0	szembe fal kis cseppkõ oldala csavar
+Tff3	Tff3A	2.62	200.4	32.1		0	0	0	0	balra kis beugró vesztett
+Tff3	Tff4	0.64	13.8	69.4		0	0	0	0	szûkület felsõ perem csavar
+Tff4	Tff5	0.9	15.8	31.1		0	0	0	0	jobb fal él csavar
+Tff5	Tff5A	3.15	37	-32.5		0	0	0	0	lefelé vesztett
+Tff5	Tff6	1.58	232.3	61.1		0	0	0	0	felbújó után jobb fal csavar
+Tff6	Tff7	2.38	350.7	79.7		0	0	0	0	ferde mennyezet csavar
+Tff7	Tff8	2.15	291.2	61.6		0	0	0	0	jobbra nagy kiálló csavar
+Tff8	Tff9	2.37	218.5	69.6		0	0	0	0	bal él elágazásnál csavar
+Tff9	Tff10	1.4	4.5	60.3		0	0	0	0	felbújás vége jobb fal csavar
+Tff10	Tff10A	2.6	239.2	35.5		0	0	0	0	vége vesztett
+Tff10	Tff11	1.99	133.5	2.1		0	0	0	0	jobb fal kiálló csavar
+Tff11	Tff12	3.17	112.8	40.1		0	0	0	0	bal fal kanyar csavar
+Tff12	Tff13	1.09	33.4	43.3		0	0	0	0	mennyezet él csavar
+Tff13	Tff14	2.44	31	42		0	0	0	0	vége vesztett
+Tff9	Tff11	2.09	115.3	38.4		0	0	0	0	jobb fal kiálló csavar körbezár
+Tff2	Tff2A	3.42	117.1	-65.5		0	0	0	0	csõ alja ferde cseppkõfal csavar
+ChN14	ChN14A	0.94	277.4	-26.5		0	0	0	0	jobb fal kiugró csavar
+ChN14A	ChN14B	1.07	215	36.8		0	0	0	0	mennyezet él csavar
+ChN14B	Tff2A	0.68	264.7	28.4		0	0	0	0	körbezár
+Tff2A	Tff2B	2.06	217	28.9		0	0	0	0	vége vesztett
+
+Survey name: 2015.01.22.
+Survey team: ARIADNE KBE
+Kiss Klaudia	Fúrás
+Kovács Richárd	Mérés
+	
+	
+	
+Survey date: 42026.5698484722
+Declination: 4.1
+Instruments: 
+DistoX (0.21)	0
+DistoX (0.21)	0
+DistoX (0.21)	0
+Fix point: 
+0	0	0	0	0	0	0
+Survey data
+From	To	Length	Azimuth	Vertical	Label	Left	Right	Up	Down	Note
+Bel1-4	Met1	1.875	150.7	-4.7		0	0	0	0	bontott szûkület jobb fala csavar
+Met1	Met2	2.468	106.8	21.2		0	0	0	0	teremben bontás kezdet bal kõtömb csavar
+Met2	Met3	2.534	163.7	-32.2		0	0	0	0	szûk vége jobb fal mennyezet csavar
+Met3	Met4	2.294	89.8	-20.4		0	0	0	0	balra cseppköves kõtömb csavar
+Met4	Met5	4.049	156.9	-32.3		0	0	0	0	fehér cseppköves után lapos kõtömb csavar
+Met5	Met6	1.333	76.9	24.7		0	0	0	0	mennyezet él csavar
+Met6	Met7	2.171	115.5	-38.6		0	0	0	0	szûkületben bal fal csavar
+Met7	Met8	1.894	134	-26.2		0	0	0	0	tó partján kõél csavar
+Met8	Met9	3.081	58	26.3		0	0	0	0	tó végénél bal fal él csavar
+Met9	Met10	3.286	52.4	6.9		0	0	0	0	nagy kõtömb teteje csavar
+Met10	Met10A	2.018	180.3	84.9		0	0	0	0	kürtõben elágazás csavar
+Met10A	Met10B	3.08	325.8	82.4		0	0	0	0	kürtõ teteje üst vesztett
+Met10A	Met10C	3.06	128.5	40.7		0	0	0	0	oldalhasadék vesztett
+Met10	Met11	1.887	95.2	24.6		0	0	0	0	átjáróban nagy kõtömb csavar
+Met11	Met12	1.372	115.9	22.6		0	0	0	0	terem kezdet mennyezet él csavar
+Met12	Met13	1.08	17.2	31.6		0	0	0	0	mennyezet akna elõtt csavar
+Met13	Met13-1	1.551	33	3.9		0	0	0	0	jobb oldalt nagy kõtömb éle csavar
+Met13-1	Met13-2	4.445	322.8	47		0	0	0	0	bal fal kürtõnél csavar
+Met13-2	Met13-3	2.036	19.6	8.4		0	0	0	0	elágazás cseppkõbütyök csavar
+Met13-3	Met13-3A	1.691	26.9	32.6		0	0	0	0	szûkület mennyezet él csavar
+Met13-3A	Met13-3B	1.401	20.1	20.77		0	0	0	0	szemben fülke fala vesztett
+Met12	Met12-1	6.117	122.6	-9.8		0	0	0	0	terem jobb kõtömbök kürtõ alatt csavar
+Met12-1	Met12-1K	10.749	220.4	82.5		0	0	0	0	nagy kürtõ vesztett
+Met12-1	Met12-2	7.517	73.2	13.5		0	0	0	0	terem vége cseppköveknél fal él csavar
+Met12-2	Met12-2A	2.972	355.9	12.4		0	0	0	0	bal járatvég vesztett
+Met12-2	Met12-3	3.194	190.6	48		0	0	0	0	kürtõ eleje bal fal csavar
+Met12-3	Met12-4	2.717	263.7	61.5		0	0	0	0	jobb oldal kiálló csavar
+Met12-4	Met12-5	1.882	274.3	68.5		0	0	0	0	kürtõfal has csavar
+Met12-5	Met12-6	3.75	234	64.6		0	0	0	0	szûk rész végénél karcolt
+Met12-6	Met12-7	1.637	187.8	69.5		0	0	0	0	kürtõ teteje vesztett
+
+Survey name: 2015.02.02
+Survey team: ARIADNE KBE
+Kovács Richárd	Mérés
+Varga Eszter	Fúrás
+	
+	
+	
+Survey date: 42036.5698484722
+Declination: 4.1
+Instruments: 
+DistoX (0.21)	0
+DistoX (0.21)	0
+DistoX (0.21)	0
+Fix point: 
+0	0	0	0	0	0	0
+Survey data
+From	To	Length	Azimuth	Vertical	Label	Left	Right	Up	Down	Note
+Met4	Met4A	3.416	246.8	70.1		0	0	0	0	Szende-kürtõ pereme csavar
+Met4A	Met4B	7.913	296.3	69.8		0	0	0	0	Szende-kürtõ teteje vesztett
+Met4	Met4AA	5.85	328.2	79.2		0	0	0	0	Szundi-kürtõ fent cseppkõlefolyás heliktit vesztet
+Met4AA	Met4AB	4.396	329.4	73.4		0	0	0	0	Szundi-kürtõ teteje vesztett
+Met4	Met4-1	2.905	124.4	51		0	0	0	0	Kuka-kürtõ elágazás él nagyobb cseppkõ teteje
+Met4-1	Met4-1A	3.998	37.8	74		0	0	0	0	bal ág teteje vesztett
+Met4-1	Met4-2	1.787	170.5	57.7		0	0	0	0	Kuka-kürtõ kanyar szembe fal csavar
+Met4-2	Met4-3	5.141	283.4	61		0	0	0	0	denevérüst mellett karcolt
+Met4-3	Met4-4	1.736	35.4	57.1		0	0	0	0	bal oldal heliktitsor teteje karcolt
+Met4-4	Met4-4A	3.414	133.5	69		0	0	0	0	jobb ág teteje vesztett
+Met4-4	Met4-5	2.732	75.6	59.4		0	0	0	0	fent szembe fal karcolt
+Met4-5	Met4-6	1.556	349.2	22.6		0	0	0	0	balra szûk vég vesztett
+Met13-1	Td1	2.652	101.4	-24.6		0	0	0	0	kürtõk alatt kõtömb csavar
+Td1	Td2	5.427	338.7	80.7		0	0	0	0	Tudor-kürtõ bal oldali él kiszállás csavar
+Td2	Td3	1.743	356.3	47.5		0	0	0	0	jobb fal cseppköves has csavar
+Td3	Td3A	0.693	281.2	-1.7		0	0	0	0	bal fal denevéres csavar
+Td3A	Td3B	3.324	216.7	57.2		0	0	0	0	kürtõ teteje csavar
+Td3A	Td3A1	2	341.4	-35		0	0	0	0	elõre átvezetõ lyuk vesztett
+Td3	Td4	2.202	173.4	56.5		0	0	0	0	átmászásnál szembe fal csavar
+Td4	Td5	2.325	261.7	48.7		0	0	0	0	jobb fal kiálló rétegeknél csavar
+Td5	Td6	2.484	209	52.7		0	0	0	0	jobb kõél elágazásnál vesztett
+Td6	Td6A	2.929	260.8	61.9		0	0	0	0	jobb oldali kürtõrész vesztett
+Td6	Td7	0.89	187.4	17.8		0	0	0	0	kijelölés szûk kezdet
+Td7	Td8	2.138	149	43.7		0	0	0	0	befelé bal fal vesztett
+Td1	Vd1	5.772	125.4	75.4		0	0	0	0	Vidor-kürtõ teteje felé csavar
+Vd1	Vd2	1.31	122.6	73.5		0	0	0	0	kürtõ perem fölött cseppköves perem csavar
+Vd2	Vd2A	2.181	123.4	-58		0	0	0	0	lefelé átvezetõ akna terembe
+Vd2	Vd2-1	2.697	230	43.5		0	0	0	0	heliktites luknál vesztett
+Vd2	Vd3	4.936	254.7	72.5		0	0	0	0	kürtõ szûk teteje vesztett
+Met13-2	Mo1	2.43	170.6	58.1		0	0	0	0	felmászás után bal fal kiálló csavar
+Mo1	Mo2	2.778	255.8	80.4		0	0	0	0	szûkebb rész fölött cseppköves karcolt
+Mo2	Mo3	2.822	9.7	69.7		0	0	0	0	szûk elõtt jobbra cseppköves kiálló karcolt
+Mo3	Mo4	3.112	219.5	58.6		0	0	0	0	szûk után bal fal kiálló karcolt
+Mo4	Mo5	3.038	298.9	70.9		0	0	0	0	kürtõ teteje kõtömb vesztett
+Met8	Met8-1	2.828	66.3	64.5		0	0	0	0	kürtõ cseppköves pereme vesztett
+Met8-1	Met8-2	4.497	24.9	78.1		0	0	0	0	kürtõ teteje vesztett
+Met8	Met8A	3.185	158.8	1.8		0	0	0	0	tó után fülke bementet bal fal él karcolt
+Met8A	Met8B	0.777	236.7	51.8		0	0	0	0	bal fal fülkében karcolt
+Met8B	Met8C	1.381	201.3	-11.7		0	0	0	0	fülke vége szemben vesztett
+Met8B	Met8B1	4.047	268.2	74.3		0	0	0	0	kürtõ elszûkülésig vesztett
+
+Survey name: 2015.02.04.
+Survey team: ARIADNE KBE
+Kovács Jenõ	Fúrás
+Kovács Richárd	Mérés
+	
+	
+	
+Survey date: 42039.5698484722
+Declination: 4.1
+Instruments: 
+DistoX (0.21)	0
+DistoX (0.21)	0
+DistoX (0.21)	0
+Fix point: 
+0	0	0	0	0	0	0
+Survey data
+From	To	Length	Azimuth	Vertical	Label	Left	Right	Up	Down	Note
+Ch36	Ch37	5.465	225	77.4		0	0	0	0	függõleges rész után bal fal nagy él csavar
+Ch37	Ch38	7.996	244.2	58.4		0	0	0	0	jobb fal kürtõ alatt csavar
+Ch38	Ch39	3.032	210.9	56.9		0	0	0	0	bal fal cseppkõletörés elõtt csavar
+Ch39	Ch40	7.085	248.6	54.7		0	0	0	0	letörés fölött csavar
+Ch40	Ch41	4.141	230.7	50.2		0	0	0	0	fent szembe fal elágazás csavar
+Ch41	Ch42	2.313	344.1	49.9		0	0	0	0	jobb fal kürtõ alatt elágazás csavar
+Ch42	Ch42A	5.083	244.8	0		0	0	0	0	jobb fal nagy cseppkõ alatt csavar
+Ch42A	Ch42AK	5.581	312.4	67.6		0	0	0	0	szûk kürtõ teteje vesztett
+Ch42A	Ch42B	4.119	214.7	4.4		0	0	0	0	szûkülésnél bal fal csavar
+Ch42B	Ch42C	1.782	245.8	28.4		0	0	0	0	bontás vesztett
+Ch42	Ch43	2.776	219.5	73.4		0	0	0	0	kürtõ pereme fent csavar
+Ch43	Ch44	2.932	304.7	37.1		0	0	0	0	fülkében átbújás után szemben kiálló csavar
+Ch44	Ch45	1.423	40	58.9		0	0	0	0	szûkület kezdet jobb cseppköves fal csavar
+Ch45	Ch46	2.536	28.8	24.2		0	0	0	0	szûkület után jobb mennyezet csavar
+Ch46	Ch47	1.23	51.7	11.1		0	0	0	0	jobbra ferde mennyezet él csavar
+Ch47	Ch47A	4.72	326.3	39.9		0	0	0	0	balra fent kalcitlemez dugó vesztett
+Ch47	Ch47-1	3.468	119.2	-50.9		0	0	0	0	álfenéknél szembe fal vesztett
+Ch47	Ch48	3.316	30.7	20.6		0	0	0	0	felmászás kezdet kiálló kõtömb csavar
+Ch48	Ch49	2.212	23.6	61.1		0	0	0	0	fehér fal állócseppkõ elágazás csavar
+Ch49	Ch49-1	1.467	146.4	27.7		0	0	0	0	felmászás végénél jobb fal csavar
+Ch49-1	Ch49-2	1.214	58.7	32.7		0	0	0	0	bal fal él csavar
+Ch49-2	Ch49-3	1.671	68.1	35.7		0	0	0	0	bal fal csavar
+Ch49-3	Ch49-4	3.333	120.2	34.5		0	0	0	0	jobb fal él elágazás csavar
+Ch49-4	Ch49-4A	3.887	91	32		0	0	0	0	felmászás után középen kõtömb csavar
+Ch49-4A	Ch49-4AA	1.58	348.6	40.3		0	0	0	0	kis oldaljárat bal fal csavar
+Ch49-4AA	Ch49-4AB	3.323	91.6	37.6		0	0	0	0	vége vesztett
+Ch49-4A	Ch49-4B	1.471	169	65.6		0	0	0	0	mennyezet él csavar
+Ch49-4B	Ch49-4C	2.61	110.2	31.6		0	0	0	0	bal fülke vége lyuk vesztett
+Ch49-4B	Ch49-4D	3.125	222.5	25.9		0	0	0	0	jobb fülke vége vesztett
+Ch49-4	Ch49-5	1.006	167.9	-2.6		0	0	0	0	jobb fal fent csavar
+Ch49-5	Ch49-6	2.575	95.7	-4.4		0	0	0	0	fülkében bal fal él csavar
+Ch49-6	Ch49-7	1.666	163.6	-24.7		0	0	0	0	állócseppjõ teteje vesztett
+Ch49-7	Ch49-7A	2.54	201.2	30.5		0	0	0	0	fülke jobb vége vesztett
+Ch49-7	Ch49-8	2.789	125.1	-27.1		0	0	0	0	elõre lefelé vesztett
+Ch49	Ch50	2.209	299.2	-26.8		0	0	0	0	bebújásban bal oldalt csavar
+Ch50	Ch51	2.109	20.8	0.6		0	0	0	0	cseppköves lejtõben csavar
+Ch51	Ch52	2.065	13.4	52.2		0	0	0	0	Szentély mennyezet csavar
+Ch52	Ch53	1.34	25.7	-14.9		0	0	0	0	letörés után jobb nagy kiálló csavar
+Ch53	Ch53A	1.482	224	-54		0	0	0	0	kalcitos ereszke bejárat mennyezet csavar
+Ch53	Ch54	1.521	19.3	-18.1		0	0	0	0	bal fal fehér él csavar
+Ch54	Ch55	2.45	34.2	-20.9		0	0	0	0	Kinga-terem jobb benyúló él alacsonyan csavar
+Ch55	Ch56	9.887	332.2	58.9		0	0	0	0	Klacitlemez dugó alja vesztett
+
+Survey name: 2015.02.15.
+Survey team: ARIADNE KBE
+Kovács Richárd	Mérés
+Tórh Alexa	Fúrás
+	
+	
+	
+Survey date: 42050.5698484722
+Declination: 4.1
+Instruments: 
+DistoX (0.21)	0
+DistoX (0.21)	0
+DistoX (0.21)	0
+Fix point: 
+0	0	0	0	0	0	0
+Survey data
+From	To	Length	Azimuth	Vertical	Label	Left	Right	Up	Down	Note
+Met13-3	Met13-4	2.231	329.1	63.8		0	0	0	0	felfelé csõben mennyezet él csavar
+Met13-4	Met13-5	2.776	16.2	38.4		0	0	0	0	vége fent bal oldalon vesztett
+Met13	Met14	1.959	2.7	-62		0	0	0	0	akna teteje kõtömb él csavar
+Met14	Met15	1.259	278.4	-68.7		0	0	0	0	akna bal fal csavar
+Met15	Met16	6.953	175	-87.2		0	0	0	0	akna perem 2m magasan csavar
+Met16	Met17	1.79	350.9	-33.1		0	0	0	0	cseppköves fal elágazás csavar
+Met17	Met17A	1.822	54	9.7		0	0	0	0	hasadék jobb fal nyereg után csavar
+Met17A	Met17B	4.893	355.5	-56.9		0	0	0	0	hasadék alja bal fal csavar
+Met17B	Met17C	2.26	31.8	-12.7		0	0	0	0	vége elszûkülés középen vesztett
+Met17	Met18	1.837	349.3	-76.6		0	0	0	0	lefelé ferde kõtömb jobb oldalon csavar
+Met18	Met19	2.776	308.3	-15		0	0	0	0	átbújás után hasadékban elágazás csavar
+Met19	Met20	3.162	18.4	38.9		0	0	0	0	felmászás után bal fal kiálló csavar
+Met20	Met21	2.151	34.3	20.1		0	0	0	0	jobbra denevéres lyuk elõtt csavar
+Met21	Met22	3.309	287.6	66.2		0	0	0	0	felfelé mennyezet nagy kiálló csavar
+Met22	Met23	2.244	345.5	52.3		0	0	0	0	fent szembe fal kürtõ alatt csavar
+Met23	Met24	2.557	61.7	83		0	0	0	0	kürtõ teteje vesztett
+Met23	Met23J	2.629	67.5	-27.4		0	0	0	0	terem jobb oldla lent vesztett
+Met23	Met23B	2.694	231.1	22.6		0	0	0	0	terem bal oldala fent cseppköveknél vesztett
+Met19	Met19-1	2.696	224.5	59.2		0	0	0	0	hasadék bal fal csavar
+Met19-1	Met19-1A	2.733	316.2	54		0	0	0	0	kürtõben szûkülésnél középen vesztett
+Met19-1A	Met19-1B	3	287.9	71.5		0	0	0	0	kürtõ elszûkülõ vége vesztett
+Met19-1	Met19-2	4.83	237.5	40.6		0	0	0	0	ferde cseppköves fal csavar
+Met19-2	Met19-3	3.916	267.2	60.7		0	0	0	0	kürtõ teteje vesztett
+Met19-2	Met19-2A	3.684	147.2	-60.3		0	0	0	0	lefelé kis akna alja vesztett
+Met5	Met5-1	2.344	194.2	3.7		0	0	0	0	átbújás mennyezet él csavar
+Met5-1	Met5-2	2.636	198.5	12.6		0	0	0	0	teremben szembe fal csavar
+Met5-2	Met5-2A	2.056	301.5	20.7		0	0	0	0	kis kürtõ kezdete állócseppkõ
+Met5-2A	Met5-2B	3.585	232.2	74.7		0	0	0	0	kürtõ teteje vesztett
+Met5-2	Met5-3	1.808	265.1	-69.9		0	0	0	0	kürtõ kezdet perem csavar
+Met5-3	Met5-4	2.087	328.4	76.9		0	0	0	0	kürtõ nyereg jobb fal csavar
+Met5-4	Met5-5	1.062	257.1	48.5		0	0	0	0	bal fal csavar
+Met5-5	Met5-5A	3.648	2.2	-74.1		0	0	0	0	lefelé párkányig vesztett
+Met5-5	Met5-6	2.381	56.7	63.8		0	0	0	0	ferde részen jobb fal csavar
+Met5-6	Met5-7	4.358	321.9	53.8		0	0	0	0	teteje vége középen vesztett
+Ch5	Ch5-1	3.116	102.7	15.5		0	0	0	0	Chlovia bejárat jobb oldalt csavar
+Ch5-1	Ch5-2	1.958	76.1	27.1		0	0	0	0	mennyezet kis cseppkõ karcolt
+Ch5-2	Ch5-3	2.314	27.4	-0.3		0	0	0	0	átbújó után ferde fal bütyök karcolt
+Ch5-3	Ch5-4	2.075	22.3	40.3		0	0	0	0	mennyezet él kis cseppkõ karcolt
+Ch5-4	Ch5-5	3.292	45.9	-8.2		0	0	0	0	elõre vége szemben vesztett
+Ch18	MCs1	3.1	270.7	-22.3		0	0	0	0	lebújás mennyezet perem csavar
+MCs1	MCs1A	1.848	244.8	-1.3		0	0	0	0	fülke vége oldalra vesztett
+MCs1	MCs2	2.839	325.1	-59.7		0	0	0	0	akna kezdet bal fal csavar
+MCs2	MCs3	3.214	98.2	-70		0	0	0	0	jobb hasadékfal felsõ párkánynál csavar
+MCs3	MCs4	3.475	1.3	-74.9		0	0	0	0	lent hasadékfal kiálló el elágazás csavar
+MCs4	MCs5	6.276	231.5	-69.4		0	0	0	0	hasadék bal fal lent bontásnál csavar
+MCs5	MCs5A	2.266	240.1	9		0	0	0	0	hasadék vége vesztett
+MCs5	MCs6	1.558	350.5	-65.8		0	0	0	0	lefelé bontás vesztett
+MCs4	MCs4-1	3.649	13.4	64.9		0	0	0	0	kürtõ párkánynál csavar
+MCs4-1	MCs4-1A	1.245	254.4	39.8		0	0	0	0	oldalkürtõ kezdete bal fal csavar
+MCs4-1A	MCs4-1B	4.721	247.4	75.3		0	0	0	0	kürtõ teteje vége vesztett
+MCs4-1	MCs4-2	3.111	37.3	52.3		0	0	0	0	felmászás után bal fal csavar
+MCs4-2	MCs4-3	4.926	124.3	66.2		0	0	0	0	omladék teteje vesztett
+
+End of survey data.
+
+*** Surface ***
+End of surface data.
+
+EOF.
