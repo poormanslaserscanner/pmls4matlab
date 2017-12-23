@@ -28,7 +28,7 @@ for i = 1 : n
 end
 sd = signed_distance(pnts, vt, tris, 'SignedDistanceType', 'winding_number');
 log = sd > -voxsiz/500;
-sprintf('cs2: %f', sum(sd(sd > 0)))
+sprintf('cs2: %f', sum(sd(sd > 0)) * voxsiz / 100)
 pnts = pnts(log,:) + rnds(log,:);
 %points2ply(pnts,'takk.ply');
 return;

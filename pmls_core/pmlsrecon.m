@@ -1,6 +1,8 @@
 function H = pmlsrecon( H, varargin )
 %PMLSRECON Summary of this function goes here
 %   Detailed explanation goes here
+id = 'MATLAB:delaunayTriangulation:DupPtsWarnId';
+warning('off', id);
 if nargin > 1
     P.vox = varargin;
     H = plclarifyinput(H, P.vox{1});

@@ -7,15 +7,15 @@ end
 if nargin < 5
     with_cuda = false;
 end
-if with_cuda
-    if gpuDeviceCount > 0
-        dev = gpuDevice;
-        fprintf( 'Voxelize on cuda device: %s\n', dev.Name );
-    else
-        warning( 'Cuda device not found. Voxelize on CPU.' );
-        with_cuda = false;
-    end
-end
+% if with_cuda
+%     if gpuDeviceCount > 0
+%         dev = gpuDevice;
+%         fprintf( 'Voxelize on cuda device: %s\n', dev.Name );
+%     else
+%         warning( 'Cuda device not found. Voxelize on CPU.' );
+%         with_cuda = false;
+%     end
+% end
 n = numel( trisc );
 assert( n == numel( vtc ) );
 bb0s = zeros(n,3);
