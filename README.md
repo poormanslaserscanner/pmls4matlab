@@ -23,8 +23,8 @@ git submodule update --init
 cd ..
 ```
 3. Alternatively you can also download these files in .zip format from https://github.com/poormanslaserscanner/pmls4matlab/archive/v2.0rc1.zip
-4. Download precompiled binaries from https://github.com/poormanslaserscanner/pmls4matlab/releases
-5. Copy the bin directory into pmls4matlab
+4. Download precompiled binaries (bin.zip) from https://github.com/poormanslaserscanner/pmls4matlab/releases
+5. Unzip and copy the bin directory into the pmls4matlab directory
 
 ### Setup
 1. Set PMLS_INSTALL_DIR environmental variable to the pmls installation folder, eg.: "d:\pmls4matlab"
