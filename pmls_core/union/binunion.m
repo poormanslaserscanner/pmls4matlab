@@ -120,7 +120,8 @@ if numel(Hc) == 2
     end
 end
 if numel(Hc) == 2
-    v = imopen( v, strel('cube',2) );
+%    v = imopen( v, strel('cube',2) );
+    v = imopen( v, strel('arbitrary',ones(2,2,2)) );
 end
 %vbound(v) = false;
 %v = v | vbound;
