@@ -1,6 +1,6 @@
 [submodule "go-sqlite"]
 	path = go-sqlite
-	url = https://github.com/markuman/go-sqlite.git
+	url = https://github.com/poormanslaserscanner/go-sqlite.git
 [submodule "sqlite"]
 	path = sqlite
 	url = https://github.com/mackyle/sqlite.git
