@@ -1,7 +1,7 @@
 function [ vol, t ] = cudavox( vt, tris, bbox )
 %CUDAVOX Summary of this function goes here
 %   Detailed explanation goes here
-c = (round(((bbox(:,1) + bbox(:,2) / 2))))';
+c = (round(((bbox(:,1) + bbox(:,2)) / 2)))';
 bbox(:,1) = bbox(:,1) - c';  
 bbox(:,2) = bbox(:,2) - c';  
 vt = vt - repmat(c, size(vt,1),1);
