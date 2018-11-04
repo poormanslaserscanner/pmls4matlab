@@ -3,7 +3,7 @@ function eraysmin = minvisible( base, rays, erays, zeroshots )
 %   Detailed explanation goes here
 n = size( base, 1 );
 eraysmin = cell(n,1);
-parfor i = 1: n
+for i = 1: n
 %     w = getCurrentWorker;
 %     if ~isempty(w)
 %         disp(class(w.ProcessId));
