@@ -1,9 +1,10 @@
 function H = plclarifyinput( H, vox )
 %PLCLARIFYINPUT Summary of this function goes here
 %   Detailed explanation goes here
-H.rays = shortenrays(H.base, H.rays, vox / 2);
-H = plremoveoutliers(H, 2, 2);
+%H.rays = shortenrays(H.base, H.rays, vox / 2);
+%H = plremoveoutliers(H, 2, 2);
 H = plextendvisible(H);
+return
 H = plremoveoutliers(H, 5, 5);
 [H,n] = rmsingularities(H, vox);
 if n > 0

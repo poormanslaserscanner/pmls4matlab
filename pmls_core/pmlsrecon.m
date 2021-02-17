@@ -42,7 +42,7 @@ else
         proc = proc + 1;
         [H,fnd] = checkfile(path,proc,H);
         if ~fnd
-            H = plvoxuniohdgs(H, vox,0.0,true,true);
+            H = plvoxuniohdgs(H, vox,0.0,true,true, 0.0);
             saveprocres(H,path,proc);
         end
         proc = proc + 1;
@@ -58,15 +58,15 @@ else
         proc = proc + 1;
         [H,fnd] = checkfile(path,proc,H);
         if ~fnd
-            H = plvoxremesh(H,vox,1.0,true,true);
+            H = plvoxremesh(H,vox,0.0,true,true);
             saveprocres(H,path,proc);
         end
-        proc = proc + 1;
-        [H,fnd] = checkfile(path,proc,H);
-        if ~fnd
-            H = plrmsingularities(H,true, mul * vox);
-            saveprocres(H,path,proc);
-        end
+%         proc = proc + 1;
+%         [H,fnd] = checkfile(path,proc,H);
+%         if ~fnd
+%             H = plrmsingularities(H,true, mul * vox);
+%             saveprocres(H,path,proc);
+%         end
         proc = proc + 1;
         [H,fnd] = checkfile(path,proc,H);
         if ~fnd
@@ -76,7 +76,7 @@ else
         proc = proc + 1;
         [H,fnd] = checkfile(path,proc,H);
         if ~fnd
-            H = plvolumedeform(H,vox,1.0,true,true,false,true);
+            H = plvolumedeform(H,vox,0.0,true,true,true,true);
             saveprocres(H,path,proc);
         end
         proc = proc + 1;
