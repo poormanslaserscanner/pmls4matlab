@@ -11,7 +11,7 @@ catch ME
     fclose('all');
     rethrow(ME);
 end
-[T.base, T.rays, T.vid, ~, T.zeroshots] = truehedgehogs(T.base, T.rays, T.vid, T.edges, T.zeroshots, truemin);
+[T.base, T.rays, T.vid, T.edges, T.zeroshots] = truehedgehogs(T.base, T.rays, T.vid, T.edges, T.zeroshots, truemin);
 T.pmls_type = 'hedgehog';
 fp = csvfile;
 if any(fp=='\')
